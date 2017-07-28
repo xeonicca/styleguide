@@ -1,0 +1,216 @@
+@import "../abstracts/variables.less";
+@import "../abstracts/functions.less";
+
+// common list item
+// 共用商品清單顯示: 左圖右資訊的顯示方式
+
+.goods-item {
+  display: flex;
+  padding: 5px 10px;
+  border-top: 1px solid #eee;
+  background: #FFF;
+
+  &.goods-item-bordered {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+  }
+
+  .item-figure {      // 圖示區塊
+    width: 110px;
+    height: 100%;
+    max-width: 100%;
+    padding: 5px;
+    display: inline-block;
+    text-align: center;
+    align-items: center;
+    margin-right: 5px;
+    img {
+      max-width: 100%;
+      max-height: 100%
+    }
+  }
+
+  > .item-info-block {
+    flex: 1;
+    position: relative;
+    padding: 5px;
+  }
+
+  .item-name {        // 商品名稱
+    font-family: '微軟正黑體',Verdana,serif;
+    font-size: 1em;
+    line-height: @item_name_line_height;
+    color: #000;
+    margin-bottom: 10px;
+    word-wrap: break-word;
+    display: block;
+    font-weight: normal;
+    max-height: 2.6em;
+    overflow: hidden;
+  }
+
+  .goods-info-more {
+    display: none;
+    color: #aaa;
+    position: absolute;
+    right: 10px;
+    bottom: 5px;
+    padding: 5px 10px;
+  }
+
+  .item-payway {      // 付款方式
+    .clearfix();
+    margin-top: 5px;
+    [class^=icon] {
+      margin-right: 3px;
+      vertical-align: top;
+      float: left;
+    }
+  }
+
+  .item-uid {         // 賣家帳號
+    padding: 5px 0;
+    .text-credit {    // 賣家評價
+      padding-left: 2px;
+    }
+  }
+
+  .item-seller-credit, .item-bid-count, .item-left {
+    font-size: 81%;
+    color: @subTextColor;
+    line-height: 27px;
+  }
+  .item-left, .item-base-dfee {
+    display: none;
+  }
+  .item-free-shipment {
+    position: absolute;
+    background-color: #FFF;
+  }
+}
+
+@btnOutlineList: confirm;
+.rt-btn-outline(@btnOutlineList);
+
+.mode-list {
+  .goods-item [data-img-m]{
+    display: none !important;
+  }
+  .item-free-shipment {
+    right: 0px;
+    top: 44px;
+  }
+}
+
+.mode-two-col .goods-item, .mode-full .goods-item {
+  .item-seller-credit, .item-payway, .item-uid { display: none; }
+  .goods-info-more { display: block; }
+  img { vertical-align: middle; }
+  [data-img] {
+    display: none !important;
+  }
+}
+
+.mode-two-col [data-page] {
+  .clearfix();
+}
+
+.mode-two-col .goods-item {
+  width: 50%;
+  display: inline-block;
+  float: left;
+  text-align: center;
+  &:nth-child(odd) {
+    border-right: 1px solid #eee;
+  }
+  .item-name {
+    height: 42px;
+  }
+  .item-info-block {
+    text-align: left;
+  }
+  .item-figure {
+    width: 100%;
+    margin-right: 0px;
+    padding: 5px 0;
+    height: 125px;
+    line-height: 125px;
+  }
+  .item-free-shipment {
+    right: -7px;
+    top: 44px;
+  }
+}
+
+.mode-full .goods-item {
+  display: block;
+  .item-figure {
+    width: 100% !important;
+    height: auto !important;
+    img {
+      max-width: 100% !important;
+      max-height: 200px !important;
+    }
+  }
+  .item-name {
+    height: 1.3em;
+  }
+  .item-free-shipment {
+    right: 0px;
+    bottom: 29px;
+    z-index: 5;
+  }
+}
+
+// goods info style when mask
+.goods-mask {
+  position: fixed;
+  background: rgba(0,0,0,0.7);
+  width: 100%;
+  height: 100%;
+  left: 0;
+  bottom: 0;
+  z-index: @overlay_index;
+}
+.goods-mask-info {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: #FFF;
+  height: 0;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  border: 4px solid #eee;
+  border-bottom: none;
+  padding: 6px;
+  .item-uid {
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+  }
+  .item-seller-credit, .item-left, .item-base-dfee {
+    margin-top: 10px;
+    width: 49%;
+    display: inline-block;
+  }
+  .item-payway {
+    margin-top: 15px;
+    & [class^=icon] {
+      vertical-align: top;
+    }
+  }
+  .goods-mask-close {
+    position: absolute;
+    right: 13px;
+    top: 12px;
+    color: @subTextColor;
+  }
+}
+
+.goods-mask-img {
+  text-align: center;
+  margin-top: 50%;
+  > img {
+    max-width: 80%;
+    max-height: 200px;
+  }
+}

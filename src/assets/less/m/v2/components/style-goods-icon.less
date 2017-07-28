@@ -1,0 +1,85 @@
+@goods_sprite_path: "/images/sprite/sprite_goods_item.png?20161007";
+
+.sprite(@pos; @sprite_path) {
+  display: inline-block;
+  background: url("@{sprite_path}") no-repeat @pos;
+}
+
+// icons for paymethods
+.icon-tcat {
+  .sprite(0 -655px, @goods_sprite_path);
+  width: 23px;
+  height: 19px;
+}
+
+.icon-interpay {
+  .sprite(0px -680px, @goods_sprite_path);
+  width: 18px;
+  height: 18px;
+}
+
+.icon-cvs {
+  .sprite(0 -145px, @goods_sprite_path);
+  width: 58px;
+  height: 18px;
+}
+
+.icon-711 {
+  .sprite(0 -172px, @goods_sprite_path);
+  width: 20px;
+  height: 18px;
+}
+
+.icon-post {
+  .sprite(0 -196px, @goods_sprite_path);
+  width: 20px;
+  height: 19px;
+}
+
+.icon-pay-link {
+  .sprite( 0px -222px, @goods_sprite_path);
+  width: 20px;
+  height: 18px;
+}
+
+.icon-pay-link-installment {
+  .sprite(0px -270px, @goods_sprite_path);
+  width: 20px;
+  height: 32px;
+}
+
+.icon-pay-link-creditcard {
+  .sprite(0px -247px, @goods_sprite_path);
+  width: 20px;
+  height: 18px;
+}
+
+.icon-phone {
+  .sprite(0px -352px, @goods_sprite_path);
+  width: 22px;
+  height: 18px;
+}
+
+.icon-corporate {
+  .sprite(0px -446px, @goods_sprite_path);
+  width: 26px;
+  height: 18px;
+}
+
+.icon-mail {
+  .sprite(0px -378px, @goods_sprite_path);
+  width: 23px;
+  height: 12px;
+}
+
+.icon-safepc-v2 {
+  .sprite(0px -548px, @goods_sprite_path);
+  width: 13px;
+  height: 16px;
+}
+
+.icon-pp-certified {
+  .sprite(0px -605px, @goods_sprite_path);
+  width: 20px;
+  height: 22px;
+}

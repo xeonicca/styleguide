@@ -1,0 +1,48 @@
+@import (reference) "../abstracts/variables.less";
+
+// RT tab-panel
+// --------------------------------------------------
+.rt-tab-panel {
+  .tab-list {
+    display: flex;
+    width: 100%;
+    list-style: none;
+    padding: 0;
+    position: relative;
+    z-index: 0;
+    font-size: 87.5%;
+    height: 3em;
+    background-color: #FFF;
+    border-bottom: @defaultBorder;
+    overflow: hidden;
+  }
+  .tab {
+    flex: 1;
+    text-align: center;
+    box-sizing: border-box;
+    line-height: 3em;
+    color: @subTextColor;
+    position: relative;
+    cursor: pointer;
+    > a {
+      color: @subTextColor;
+      display: block;
+    }
+    &.is-active {
+      color: @textPrimaryColor;
+      > a {
+        color: @textPrimaryColor;
+      }
+      &:after {
+        display: inline-block;
+        content: '';
+        width: 100%;
+        height: 0;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        border-bottom: 3px solid @textPrimaryColor;
+      }
+    }
+  }
+}

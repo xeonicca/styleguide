@@ -1,0 +1,165 @@
+/** icon */
+@default-icon-color: #000;
+@default-icon-height: 14;
+@page-font-size: 13px;
+
+/** default icon styles */
+.rti {
+  display: inline-block;
+  vertical-align: middle;
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: unit(@default-icon-height, px);
+  width: unit(@default-icon-height + 2, px);
+}
+
+.rti-large {
+  @large-icon-height: @default-icon-height * 1.5;
+  height: unit(@large-icon-height, px);
+  width: unit(@large-icon-height, px);
+  vertical-align: @large-icon-height / @page-font-size * -3.5;
+}
+
+.rti-2x {
+  @2x-icon-height: @default-icon-height * 2;
+  height: unit(@2x-icon-height, px);
+  width: unit(@2x-icon-height, px);
+  vertical-align: @2x-icon-height / @page-font-size * -4;
+}
+
+.rti-3x {
+  @3x-icon-height: @default-icon-height * 3;
+  height: unit(@3x-icon-height, px);
+  width: unit(@3x-icon-height, px);
+  vertical-align: @3x-icon-height / @page-font-size * -4.5;
+}
+
+/** icon animation, borrowed from font awesome */
+.rti-spin {
+  animation: rti-spin 2s infinite linear;
+}
+
+.rti-pulse {
+  animation: rti-spin 1s infinite steps(8);
+}
+
+@keyframes rti-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(359deg);
+  }
+}
+
+/** stack icon */
+.rti-stack {
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  line-height: 0;
+
+  > .rti-stack-item:first-of-type {
+    //用來撐開父元素
+    position: relative;
+  }
+  > .rti-stack-item:not(:first-of-type) {
+    position: absolute;
+    top:0 ;
+    left:0 ;
+  }
+}
+
+
+.icon-background-generator(@name, @color-code: @default-icon-color, @width: 0, @height: 0)  {
+  // refer to image files in our dev folder
+  @filename: '@{name}.svg';
+  @svg-path: 'icons/@{filename}';
+
+  @background-uri: data-uri(@svg-path);
+
+  ._rti-background(@background-uri, @color-code) when (@color-code = @default-icon-color){
+    @filled-background-uri: @background-uri;
+  }
+
+  ._rti-background(@background-uri, @color-code) when not(@color-code = @default-icon-color){
+    @escaped-color: escape("@{color-code}");
+    @filled-background-uri: replace('@{background-uri}', '%3Cpath', '%3Cpath%20fill%3D%22@{escaped-color}%22');
+  }
+
+  ._rti-mixin(@background-uri, @width, @height) when not (@width = 0 ) and not (@height = 0){
+    @background-size: unit(@width, px) unit(@height, px);
+    background-image: ~'@{background-uri}';
+    background-size: @background-size;
+    background-repeat: no-repeat;
+  }
+
+
+  ._rti-mixin(@background-uri, @width, @height) when (@width = 0) and (@height = 0){
+    background-image: ~'@{background-uri}';
+  }
+
+  ._rti-background(@background-uri, @color-code);
+  ._rti-mixin(@filled-background-uri, @width, @height);
+}
+
+/**
+ * 產生svg icon class
+ * @param  {property} @name        icon名稱
+ * @param  {property} @color-code: default-icon-color icon顏色變數
+ * @param  {number} @width:      0                  圖示寬度
+ * @param  {number} @height:     0                  圖示高度
+ * @param  {string} @posfix:     ''                 class名稱後綴字
+ */
+.icon-generator(@name, @color-code: @default-icon-color, @width: 0, @height: 0, @posfix: '')  {
+
+  ._rti-mixin(){
+    @{classname} {
+      .icon-background-generator(@name, @color-code, @width, @height)
+    }
+  }
+
+  ._rti-classname(@name, @posfix) when (@posfix = ''){
+    @classname: ~'.rti-@{name}';
+  }
+
+  ._rti-classname(@name, @posfix) when not(@posfix = ''){
+    @classname: ~'.rti-@{name}-@{posfix}';
+  }
+
+
+  ._rti-classname(@name, @posfix);
+  ._rti-mixin();
+}
+
+/** 迴圈用 */
+/**
+ * example:
+ *  @icon-list: clock-o, check, external-link;
+ *  .loop-icon-generator(@icon-list);
+ *  會產出
+ *  .rti-clock-o
+ *  .rti-check
+ *  .rti-external-link
+ */
+.loop-icon-generator(@list, @color-code: @default-icon-color, @width: 0, @height: 0)  {
+  @list-length: length(@list);
+  ._(@counter) when (@counter <= @list-length) {
+    @name: extract(@list, @counter);
+    .icon-generator(@name, @color-code, @width, @height);
+    ._(@counter+1)
+  }
+  ._(0);
+}
+
+.icon-background-url(@name, @fill: @default-icon-color, @width: 0, @height: 0) {
+  @filename: '@{name}.svg';
+  @svg-path: 'icons/@{filename}';
+  @background-uri: data-uri(@svg-path);
+
+  @escaped-color: escape("@{color-code}");
+  @filled-background-uri: replace('@{background-uri}', '%3Cpath', '%3Cpath%20fill%3D%22@{escaped-color}%22');
+
+  background-image: ~'@{background-uri}';
+}

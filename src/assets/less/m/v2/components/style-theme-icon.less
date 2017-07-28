@@ -1,0 +1,47 @@
+@import (reference) "../vendor/mobile_theme_promo_sprite.less";
+
+@theme_promo_sprite_path: "/images/mobile/new/mobile_theme_promo_sprite.png";
+
+a[class^="icon-"] {
+  display: inline-block;
+  color: @textDefaultColor;
+  line-height: 30px;
+  text-align: center;
+  font-size: 80%;
+  font-family: '微軟正黑體', '黑体', serif;
+  margin: 5px 0;
+  &::before {
+    content: "";
+    display: block;
+    width: 43px;
+    height: 43px;
+    border-radius: 100%;
+    background-size: 38px auto;
+    background-repeat: no-repeat;
+    margin: auto;
+  }
+  &.show::before { background-image: url(@theme_promo_sprite_path); }
+  &.deco-light-blue::before { background-color: @decoLightBlueColor; }
+  &.deco-red::before { background-color: @decoRedColor; }
+  &.deco-green::before { background-color: @decoGreenColor; }
+  &.deco-orange::before { background-color: @decoOrangeColor; }
+  &.deco-purple::before { background-color: @decoPurpleColor; }
+  &.deco-blue::before { background-color: darken(@decoBlueColor, 10%); }
+  &.deco-pink::before { background-color: darken(@decoPinkColor, 10%); }
+  &.deco-light-green::before { background-color: darken(@decoLightGreenColor, 10%); }
+  &.deco-brown::before { background-color: darken(@decoBrownColor, 10%); }
+  &.deco-grey::before { background-color: darken(@defaultGrey, 10%); }
+}
+
+.loop_sprite(@list_count) when (@list_count > 0) {
+  .loop_sprite((@list_count - 1));
+  @item: extract(@spritesheet-sprites, @list_count);
+  @name: e(extract(@item, 10));
+  a.@{name}::before {
+    @y: "@{name}-offset-y";
+    background-color: @primaryColor;
+    background-position: center unit( round(unit(@@y) * 38 / 64) + 3, px);
+  }
+}
+
+.loop_sprite(length(@spritesheet-sprites));

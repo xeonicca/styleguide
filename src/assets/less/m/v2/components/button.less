@@ -1,0 +1,73 @@
+@import (reference) "../abstracts/variables.less";
+
+@button-text-dark-color: @default-font-dark-color;
+@button-text-dark-color: @default-font-light-color;
+
+
+@color-collection: primary-color, secondary-color, danger-color, success-color, info-color;
+
+.ui-button-generator-mixin(@list) {
+  @size: length(@list);
+
+  .ui-button(@variable) {
+    @color-variable: @@variable;
+    @modifier: replace(@variable, '-color$', '');
+
+    .rt-button-@{modifier} {
+      background-color: @color-variable;
+      color: contrast(@color-variable, @button-text-dark-color, @button-text-dark-color);
+    }
+  }
+
+  ._(@counter) when (@counter <= @size) {
+    @color-variable: extract(@list, @counter);
+    .ui-button(@color-variable);
+    ._(@counter+1);
+  }
+
+  ._(0);
+}
+
+// Button
+.rt-button {
+  display: inline-block;
+}
+
+// Generate buttons of various purposes
+.ui-button-generator-mixin(@color-collection);
+
+.rt-btn, a.rt-btn, .rt-btn-outline, a.rt-btn-outline {
+  .basic-btn();
+}
+
+a.rt-btn {
+  background: #FFF;
+}
+
+.basic-btn() {
+  border-radius: 3px;
+  box-sizing: border-box;
+  color: #616161;
+  font-size: 100%;
+  display: inline-block;
+  padding: 8px 20px;
+  position: relative;
+  border: @defaultBorder;
+  line-height: 20px;
+  text-align: center;
+  cursor: pointer;
+  -webkit-appearance: none;
+
+  &.full-width {
+    width: 100%;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  &.no-border {
+    border: 0;
+  }
+  &.xs { padding: 2px 5px; font-size: 13px; }
+  &.sm { padding: 4px 10px; font-size: 13px; }
+  &.lg { padding: 12px 20px; }
+  &.xl { padding: 16px 23px; }
+}

@@ -1,0 +1,26 @@
+#slideshow-page-mark {
+  padding: 3%;
+  padding: 3vw;
+  text-align: center;
+  li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 7%;
+    margin: 0 1.5vw;
+    &:before {
+      content: "";
+      display: inline-block;
+      width: 10px;
+      width: 3vw;
+      height: 10px;
+      height: 3vw;
+      border-radius: 100%;
+      background: #F0D4AF;
+      opacity: 0.2;
+      transition: all 1s;
+    }
+    &.currentPage:before {
+      opacity: 1;
+    }
+  }
+}

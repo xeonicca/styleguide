@@ -1,0 +1,29 @@
+@import "../../../common-mixin.less";
+@import (reference) "../abstracts/variables.less";
+
+.rt-icons(@iconList: default, @fill: none, @width: 0, @height: 0) {
+  .loop_icon(@list_count) when not (@iconList=default) and (@list_count > 0) {
+    @item: extract(@iconList, @list_count);
+    & when not (@fill=none) {
+      @postfix: replace(@fill, "Color", "");
+      .icon-generator(@item, @@fill, @width, @height, @postfix)
+    }
+    & when (@fill=none) {
+      .icon-generator(@item, #000, @width, @height)
+    }
+    .loop_icon((@list_count - 1));
+  }
+  .loop_icon(length(@iconList));
+}
+
+//Font Awesome Icon in Base
+@iconList: angle-right, home;
+.rt-icons(@iconList, subTextColor);
+@icongreyList: remove;
+.rt-icons(@icongreyList, defaultGrey);
+@iconListWhite: chevron-left, chevron-up;
+.rt-icons(@iconListWhite, decoWhiteColor);
+@iconListBlack: chevron-circle-left, angle-left, angle-right;
+.rt-icons(@iconListBlack);
+@iconSearch: search;
+.rt-icons(@iconSearch, decoWhiteColor, 22, 22);

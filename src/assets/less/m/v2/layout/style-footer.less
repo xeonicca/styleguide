@@ -1,0 +1,33 @@
+@import (reference) "../abstracts/variables.less";
+
+// Footer
+// --------------------------------------------------
+footer {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: @footer_index;
+  background-color: inherit;
+}
+.declaration {
+  margin: 0 5px;
+  padding: 10px 0 20px;;
+  font-size: 80%;
+  text-align: center;
+  li {
+    display: inline-block;
+    margin-bottom: 10px;
+    &+ li:before {
+      content: "|";
+      margin-right: 5px;
+    }
+    &:last-child {
+      padding: 0;
+      margin: 0;
+    }
+  }
+  span {
+    margin-bottom: 10px;
+  }
+}

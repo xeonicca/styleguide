@@ -1,0 +1,97 @@
+@import (reference) "../abstracts/variables.less";
+@import (reference) "../abstracts/functions.less";
+
+// RT Breadcrumb
+// --------------------------------------------------
+@breadcrumb-height: 36px;
+@breadcrumb-home-width: 45px;
+@breadcrumb-border-color: darken(@grayscale-start-color, 5%);
+@breadcrumb-text-color: @default-font-dark-color;
+
+.icon-generator(home, @default-font-dark-color, 16, 16, breadcrumb);
+.icon-generator(angle-right, @default-font-dark-color, 15, 15, breadcrumb);
+.icon-generator(chevron-circle-left, @default-font-dark-color, 15, 15, breadcrumb);
+
+.rt-breadcrumb {
+  box-sizing: border-box;
+  position: relative;
+  z-index: 0;
+  width: 100%;
+  height: @breadcrumb-height;
+  background-color: #FFF;
+  border-bottom: 1px solid @breadcrumb-border-color;
+  overflow: hidden;
+
+  &.is-overflowed {
+    .rt-breadcrumb-home {
+      .rti-chevron-circle-left {
+        display: inline-block;
+      }
+      .rti-angle-right-subText {
+        display: none;
+      }
+    }
+  }
+}
+
+.rt-breadcrumb-wrap {
+  width: 100%;
+  white-space: nowrap;
+  overflow-x: scroll;
+  transform: translateZ(0); // enable smooth scrolling for some android devices
+  -webkit-overflow-scrolling: touch;
+}
+
+.rt-breadcrumb-home {
+  box-sizing: border-box;
+  height: @breadcrumb-height;
+  line-height: @breadcrumb-height;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  background: linear-gradient(to right, rgba(255,255,255,1) 0%,rgba(255,255,255,1) 83%,rgba(255,255,255,0.57) 95%,rgba(255,255,255,0) 100%); /* W3C */
+  transform: translateZ(1px);
+  transform-style: preserve-3d;
+  -webkit-user-select: none;
+
+  .rt-breadcrumb-link {
+    width: @breadcrumb-home-width;
+    padding-left: 10px;
+  }
+
+  .rti-chevron-circle-left {
+    width: 10px;
+    display: none;
+  }
+}
+
+.rt-breadcrumb-list {
+  margin: 0px;
+  padding-left: 0;
+  padding-bottom: 10px;
+  height: @breadcrumb-height;
+  -webkit-user-select: none;
+}
+
+.rt-breadcrumb-node {
+  display: inline-block;
+  padding-right: 10px;
+  float: left;
+  list-style-type: none;
+  font-size: 15px;
+  line-height: @breadcrumb-height;
+  transition: all 500ms ~'cubic-bezier(0.215, 0.61, 0.355, 1)';
+  &:last-child > .rt-breadcrumb-link {
+    color: @ruten-theme-color;
+  }
+
+  &:first-child {
+    padding-left: @breadcrumb-home-width + 10;
+  }
+}
+
+.rt-breadcrumb-link {
+  display: inline-block;
+  color: @breadcrumb-text-color;
+}

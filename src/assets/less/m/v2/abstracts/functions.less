@@ -1,0 +1,14 @@
+@import "../../../common-mixin.less";
+
+/** 用來產生桌機/M版icon，fill參數會直接參考定義好的顏色變數，並將其變數名稱當作後綴字 */
+/**
+ * example:
+ *  .desktop-icon-generator(heart, primary-color);
+ *  會產出
+ *  .rti-heart-primary
+ */
+.colored-icon-generator(@name, @fill: default-icon-color, @width: 0, @height: 0) {
+  @color: @@fill;
+  @modifier: replace(@fill, '(-icon)?-color$', '');
+  .icon-generator(@name, @color, @width, @height, @modifier);
+}

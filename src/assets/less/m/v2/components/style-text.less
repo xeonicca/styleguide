@@ -1,0 +1,65 @@
+@import (reference) "../abstracts/variables.less";
+
+.text-uid {
+  color: #1977ca !important;
+  font-weight: bold;
+  font-family: arial;
+  font-size: 95%;
+}
+
+.text-credit {
+  font-family: arial;
+  font-size: 80%;
+  color: #888;
+  &:before {
+    content: ' (';
+  }
+  &:after {
+    content: ')';
+  }
+}
+
+.text-price {
+  font-family: Verdana;
+  color: @priceColor;
+  font-weight: bold;
+  font-size: 130%;
+
+  &:before {
+    content: '$';
+    letter-spacing: -1px;
+    font-size: 62.5%;
+    padding-right: 2px;
+  }
+}
+
+.text-highlight {
+  margin: 0 3px;
+  color: #f08300;
+
+  &:before {
+    content: "\201C";
+  }
+
+  &:after {
+    content: "\201D";
+  }
+}
+
+.text-bank-account {
+  font-family: "Arial", "Verdana";
+  color: #E24507;
+  letter-spacing: 1px;
+}
+
+.text-smaller {
+  font-size: 0.8em;
+}
+
+.goods-title-text {
+  font-family: '微軟正黑體',Verdana,serif;
+  font-weight: bold;
+  font-size: 1em;
+  line-height: @item_name_line_height;
+  color: #000;
+}

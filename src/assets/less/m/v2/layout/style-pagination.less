@@ -1,0 +1,73 @@
+@import (reference) "../abstracts/variables.less";
+
+// UI component: simple pagination
+// --------------------------------------------------
+@pagination_direction_bg_color: #888;
+@pagination_activat_bg_color: #bbb;
+
+.pagination {
+  margin-top: 30px;
+  text-align: center;
+
+  > ul {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    color: #FFF;
+    word-spacing: -.5px;
+    background: #D6DBDF;
+    border-radius: 6px;
+  }
+
+  li {
+    display: inline-block;
+    margin-right: 2px;
+    word-spacing: normal;
+    vertical-align: middle;
+    font-family: 'HiraKakuProN-W6','MS Gothic', Verdana, Serif;
+    font-weight: bold;
+
+    &.prev-10, &.next-10, &.page-to:not(.active) {
+      display: none;
+    }
+
+    &.prev > a, &.next > a {
+      padding: 12px 30px;
+      border: 0;
+      background-color: @pagination_direction_bg_color;
+    }
+
+    &.prev > a {
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;
+    }
+
+    &.next > a {
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+    }
+
+    &.active > a, &.current > a {
+      background-color: @pagination_activat_bg_color;
+    }
+
+    > a {
+      display: inline-block;
+      padding: 12px 50px;
+      font-size: 18px;
+      line-height: 16px;
+      color: #FFF;
+      text-align: center;
+      background: 0 0;
+      outline: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  .page-info {
+    display: none;
+  }
+}

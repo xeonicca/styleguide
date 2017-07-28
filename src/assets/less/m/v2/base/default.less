@@ -1,0 +1,27 @@
+@import (reference) "../abstracts/variables.less";
+@import (reference) "../base/reset.less";
+
+body {
+  background-color: @default-background-color;
+  color: @default-font-dark-color;
+  font-family: @default-text-fontface;
+}
+
+// anchors
+@clickable-link-color: @secondary-color;
+a {
+  color: @clickable-link-color;
+  text-decoration: none;
+}
+
+// page content
+main {
+  padding: @default-main-vertical-gutter @default-main-horizontal-gutter;
+}
+
+// divider
+hr {
+  height: 0;
+  border: 0;
+  border-top: 2px solid @default-border-top-color;
+}
