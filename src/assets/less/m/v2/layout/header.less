@@ -4,9 +4,10 @@
 @header-height: 55px;
 @header-background-color: @ruten-theme-color;
 @header-search-component-height: 30px;
+@header-default-button-color: @inverse-color;
 @header-primary-button-color: @danger-color;
 @header-secondary-button-color: @secondary-color;
-@header-button-text-size: @ui-text-fontsize;
+@header-button-text-size: @component-text-fontsize;
 
 @nav-height: 55px;
 @nav-border-color: darken(@grayscale-start-color, 5%);
@@ -23,7 +24,6 @@
 @import (reference) "../components/icon.less";
 
 .colored-icon-generator(chevron-left, white-color);
-.icon-generator(remove, @default-font-dark-color, 15, 15);
 
 .rt-header {
   display: flex;
@@ -93,17 +93,17 @@
   display: inline-block;
   top: 0;
   bottom: 0;
-  right: 7px;
+  right: 10px;
   margin: auto;
-  width: 16px;
-  height: 16px;
-  color: @default-font-dark-color;
+  color: @default-font-compliment-color;
+  font-size: @medium-fontsize;
+  line-height: @header-search-component-height;
 }
 
 .header-search-button {
   flex: 1 0 60px;
   height: @header-search-component-height;
-  background-color: @header-primary-button-color;
+  background-color: @header-default-button-color;
   margin: 0;
   border: 0;
   border-radius: 0;

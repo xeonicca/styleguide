@@ -7,7 +7,12 @@
 // Compliment theme setting
 @ruten-theme-comliment-color: #49454a;
 
-// Site-wide fontface setting
+/**
+ * Site-wide fontface setting
+ */
+
+@default-background-color: #FFF;
+
 // Helvtica Neue, Roboto: for alphabats and numerics
 // Heiti and Noto: for CJK
 @default-text-fontface: Circular, -apple-system, BlinkMacSystemFont, Roboto, 'Helvetica Neue', sans-serif;
@@ -26,29 +31,34 @@
 @content-title-fontsize: @large-fontsize;
 // for page content
 @content-text-fontsize: @regular-fontsize;
-// for button content
-@ui-text-fontsize: @regular-fontsize;
 
-@default-font-dark-color: #202223;
+
+@default-font-dark-color: #414446;
 @default-font-light-color: #fff;
 @default-font-compliment-color: #a2a2a2;
 
-// UI component color setting
-@default-background-color: #FFF;
+/**
+ * UI component color setting
+ */
 
+// color settings
 @primary-color: @ruten-theme-color;
-@danger-color: #ed3e50;
+@danger-color: #f25f5c;
 @success-color: #48cfad;
 @info-color: #c2eced;
 @secondary-color: #375AA4;
+@inverse-color: @ruten-theme-comliment-color;
 
+// for button content
+@component-text-fontsize: @regular-fontsize;
 
 @grayscale-start-color: #f2f2f2;
 @grayscale-end-color: #fafafa;
 @grayscale-background-color: linear-gradient(to bottom, @grayscale-start-color 0%, @grayscale-end-color 8%, #fff 26%, @grayscale-end-color 100%);
 
-// UI component border color setting
-@component-border-color: #f3f3f3;
+// UI component border setting
+@component-border-color: #dee1e3;
+@component-border-radius: 3px;
 
 // UI component block color setting
 @component-background-color: #fff;
@@ -60,7 +70,7 @@
 //---
 //default UI layout setting
 @default-main-horizontal-gutter: 24px;
-@default-main-vertical-gutter: 20px;
+@default-main-vertical-gutter: 30px;
 
 @default-border-top-color: #f3f3f3;
 @default-border-bottom-color: #f2f2f2;
@@ -73,7 +83,7 @@
 
 // Variable - main color
 // -----------------------------------------------------
-@primaryColor: #ff9c00;
+@primaryColor: #f39052;
 @errorColor: #ee4f4f;
 @successColor: #48cfad;
 @confirmColor: #2b913c;

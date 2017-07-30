@@ -1,0 +1,29 @@
+@import (reference) "../abstracts/variables.less";
+
+@table-component-spacing: @default-main-vertical-gutter;
+@table-border-color: @component-border-color;
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  box-sizing: border-box;
+  width: 100%;
+  margin-bottom: @table-component-spacing;
+}
+
+th,
+td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid @table-border-color;
+}
+
+th:first-child,
+td:first-child {
+  padding-left: 0;
+}
+
+th:last-child,
+td:last-child {
+  padding-right: 0;
+}

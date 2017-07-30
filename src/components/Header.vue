@@ -13,7 +13,7 @@
       <input type="hidden" name="searchfrom" value="indexbar">
       <div class="header-search-input-wrap nav-search-input">
         <input id="keyword" class="header-search-input" name="k" type="search" placeholder="找商品" value="" size="1" />
-        <a href="#" class="header-search-clear rti rti-remove rti-remove-defaultGrey" data-type="clear-key"></a>
+        <a href="#" class="header-search-clear rti-remove-defaultGrey" data-type="clear-key"><b>&times;</b></a>
       </div>
 
       <button class="header-search-button header-full-search-button nav-search-button nav-search-button-narrow js-all-key-search rti rti-search-decoWhite" type="submit" data-type="search-all">

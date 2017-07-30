@@ -1,0 +1,126 @@
+@import (reference) "../abstracts/variables.less";
+
+@form-border-color: @component-border-color;
+@form-active-border-color: #3498db;
+@form-border-radius: @component-border-radius;
+
+@form-error-border-color: @danger-color;
+@form-error-color: @danger-color;
+
+@form-success-border-color: @success-color;
+@form-success-color: darken(@success-color, 10%);
+
+@form-gutter: @default-main-vertical-gutter;
+@form-component-gutter: 15px;
+
+@form-input-height: 36px;
+@form-input-fontsize: @regular-fontsize;
+@form-label-fontsize: @regular-fontsize;
+@form-text-fontsize: @small-fontsize;
+
+.rt-form {
+  margin-bottom: @form-gutter;
+}
+
+.rt-form-group {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: @form-component-gutter;
+}
+
+.rt-form-input {
+  flex: 0 0 100%;
+  height: @form-input-height;
+  padding: 6px 10px; // The 6px vertically centers text on FF, ignored by Webkit
+  background-color: #fff;
+  border: 1px solid @form-border-color;
+  border-radius: @form-border-radius;
+  font-size: @form-input-fontsize;
+  box-shadow: none;
+  box-sizing: border-box;
+
+  &:focus {
+    border: 1px solid @form-active-border-color;
+    outline: 0;
+  }
+
+  textarea& {
+    min-height: 65px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+  }
+}
+
+.rt-form-text {
+  font-size: @form-text-fontsize;
+}
+
+
+.rt-form-label {
+  display: block;
+  margin-bottom: 10px;
+  padding-left: 2px;
+  font-size: @form-label-fontsize;
+}
+
+.rt-form-group-error {
+  > .rt-form-label {
+    color: @form-error-color;
+  }
+
+  > .rt-form-input {
+    border-color: @form-error-border-color;
+  }
+}
+
+.rt-form-text-error {
+  position: relative;
+  right: 5px;
+  padding: 6px 8px;
+  background-color: @form-error-color;
+  color: #fff;
+
+  &:before {
+    content: '';
+    position: absolute;
+    right: 20px;
+    bottom: -12px;
+    border: 6px solid transparent;
+    border-top-color: @form-error-color;
+  }
+}
+
+.rt-form-group-success {
+  > .rt-form-label {
+    color: @form-success-color;
+  }
+
+  > .rt-form-input {
+    border-color: @form-success-border-color;
+  }
+}
+
+.rt-form-text-success {
+  color: @form-success-color;
+}
+
+
+fieldset {
+  padding: 0;
+  border-width: 0;
+}
+
+input {
+  &[type="checkbox"],
+  &[type="radio"] {
+    display: inline;
+  }
+}
+
+label > .label-body {
+  display: inline-block;
+  margin-left: .5rem;
+  font-weight: normal;
+}

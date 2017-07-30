@@ -449,3 +449,20 @@ template {
 [hidden] {
   display: none;
 }
+
+/* Removes awkward default styles on some inputs for iOS */
+input {
+  &[type="email"],
+  &[type="number"],
+  &[type="search"],
+  &[type="text"],
+  &[type="tel"],
+  &[type="url"],
+  &[type="password"] {
+    appearance: none;
+  }
+}
+
+textarea {
+  appearance: none;
+}
