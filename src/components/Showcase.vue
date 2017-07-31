@@ -9,29 +9,46 @@
     <button class="rt-button rt-button-inverse">預設按鈕樣式</button>
     <button class="rt-button rt-button-danger">預設按鈕樣式</button>
     <button class="rt-button rt-button-success">預設按鈕樣式</button>
-    
+
     <h2 class="rt-page-subtitle">表格</h2>
     <table>
       <thead>
         <tr>
-          <th>Name</th>
-          <th>Age</th>
-          <th>Sex</th>
-          <th>Location</th>
+          <th></th>
+          <th>1週</th>
+          <th>1月</th>
+          <th>半年</th>
+          <th>全部</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td>Dave Gamache</td>
-          <td>26</td>
-          <td>Male</td>
-          <td>San Francisco</td>
+          <td>優良評價</td>
+          <td>50</td>
+          <td>244</td>
+          <td>1768</td>
+          <td>7824</td>
         </tr>
         <tr>
-          <td>Dwayne Johnson</td>
-          <td>42</td>
-          <td>Male</td>
-          <td>Hayward</td>
+          <td>普通評價</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>8</td>
+        </tr>
+        <tr>
+          <td>差勁評價</td>
+          <td>0</td>
+          <td>0</td>
+          <td>1</td>
+          <td>3</td>
+        </tr>
+        <tr>
+          <td>評價次數</td>
+          <td>50</td>
+          <td>244</td>
+          <td>1769</td>
+          <td>7835</td>
         </tr>
       </tbody>
     </table>
@@ -49,6 +66,7 @@
       <div class="rt-form-group rt-form-group-success">
         <label class="rt-form-label" for="homePhone">住家電話</label>
         <input class="rt-form-input" type="text" placeholder="02-4567812" id="homePhone">
+        <p class="rt-form-text">選填</p>
       </div>
       <div class="rt-form-group">
         <label class="rt-form-label" for="exampleRecipientInput">Reason for contacting</label>
@@ -61,9 +79,9 @@
       <div class="rt-form-group">
         <label class="rt-form-label" for="exampleMessage">Message</label>
         <textarea class="rt-form-input" placeholder="Hi Dave …" id="exampleMessage"></textarea>
-        <label class="example-send-yourself-copy">
-          <input type="checkbox">
-          <span class="label-body">Send a copy to yourself</span>
+        <label class="rt-form-label">
+          <input class="rt-form-input" type="checkbox">
+          <span class="rt-form-text">Send a copy to yourself</span>
         </label>
       </div>
       <div class="rt-form-group">
