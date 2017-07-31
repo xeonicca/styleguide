@@ -6,14 +6,20 @@
 @button-border-radus: @component-border-radius;
 @button-fontsize: @component-text-fontsize;
 
-@color-collection: primary-color, secondary-color, danger-color, success-color, inverse-color;
+@button-primary-color: @primary-color;
+@button-danger-color: @danger-color;
+@button-success-color: @success-color;
+@button-secondary-color: @secondary-color;
+@button-inverse-color: @inverse-color;
+
+@button-colors: button-primary-color, button-secondary-color, button-danger-color, button-success-color, button-inverse-color;
 
 .ui-button-generator-mixin(@list) {
   @size: length(@list);
 
   .ui-button(@variable) {
     @color-variable: @@variable;
-    @modifier: replace(@variable, '-color$', '');
+    @modifier: replace(@variable, '^button-|-color$', '', 'g');
 
     .rt-button-@{modifier} {
       background-color: @color-variable;
@@ -51,41 +57,9 @@
   width: 100%;
 }
 
+.rt-outline-button {
+  
+}
+
 // Generate buttons of various purposes
-.ui-button-generator-mixin(@color-collection);
-
-.rt-btn, a.rt-btn, .rt-btn-outline, a.rt-btn-outline {
-  .basic-btn();
-}
-
-a.rt-btn {
-  background: #FFF;
-}
-
-.basic-btn() {
-  border-radius: 3px;
-  box-sizing: border-box;
-  color: #616161;
-  font-size: 100%;
-  display: inline-block;
-  padding: 8px 20px;
-  position: relative;
-  border: @defaultBorder;
-  line-height: 20px;
-  text-align: center;
-  cursor: pointer;
-  -webkit-appearance: none;
-
-  &.full-width {
-    width: 100%;
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-  }
-  &.no-border {
-    border: 0;
-  }
-  &.xs { padding: 2px 5px; font-size: 13px; }
-  &.sm { padding: 4px 10px; font-size: 13px; }
-  &.lg { padding: 12px 20px; }
-  &.xl { padding: 16px 23px; }
-}
+.ui-button-generator-mixin(@button-colors);
