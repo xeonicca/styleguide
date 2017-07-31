@@ -1,0 +1,47 @@
+@import (reference) "../abstracts/variables.less";
+
+@tab-container-background: @grayscale-background-color;
+@tab-border-color: @component-border-color;
+@tab-background-color: @grayscale-end-color;
+@tab-active-border-color: @primary-color;
+@tab-active-background-color: @default-background-color;
+@tab-active-border-width: 3px;
+@tab-text-fontsize: @small-fontsize;
+@tab-text-color: @default-font-dark-color;
+@tab-spacing: @default-main-vertical-gutter / 2;
+@tab-border-radius: @component-border-radius;
+@tab-item-vertical-padding: 12px;
+
+.rt-tab {
+  display: flex;
+  padding: 15px 5px 0;
+  border-bottom: 1px solid @tab-border-color;
+  margin-bottom: @tab-spacing;
+  background-image: @tab-container-background;
+}
+
+.rt-tab-item {
+  flex: 1;
+  position: relative;
+  bottom: -1px;
+  padding: @tab-item-vertical-padding 0 @tab-item-vertical-padding - 2;
+  text-align: center;
+  border: 1px solid @tab-border-color;
+  border-top-left-radius: @component-border-radius;
+  border-top-right-radius: @component-border-radius;
+  font-size: @tab-text-fontsize;
+  color: @tab-text-color;
+  background-color: @tab-background-color;
+
+  + .rt-tab-item {
+    margin-left: 5px;
+  }
+}
+
+.rt-tab-item-active {
+  background-color: @tab-active-background-color;
+  padding-top: @tab-item-vertical-padding - @tab-active-border-width + 1;
+  border-bottom-color: @tab-active-background-color;
+  border-top-width: @tab-active-border-width;
+  border-top-color: @tab-active-border-color;
+}

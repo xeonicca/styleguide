@@ -3,6 +3,8 @@
     <header>
       <rt-header></rt-header>
     </header>
+    <rt-breadcrumb></rt-breadcrumb>
+    <rt-tab></rt-tab>
     <main>
       <router-view></router-view>
     </main>
@@ -11,11 +13,15 @@
 
 <script>
 import header from '@/components/Header'
+import tab from '@/components/Tab'
+import breadcrumb from '@/components/Breadcrumb'
 
 export default {
   name: 'app',
   components: {
-    'rt-header': header
+    'rt-header': header,
+    'rt-tab': tab,
+    'rt-breadcrumb': breadcrumb
   }
 }
 </script>

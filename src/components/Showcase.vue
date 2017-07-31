@@ -1,14 +1,14 @@
 <template>
-  <div class="hello">
+  <div class="rt-page">
     <h1 class="rt-page-title">M版v2樣式調整</h1>
     <hr>
     <h2 class="rt-page-subtitle">按鈕</h2>
-    <button class="rt-button">預設按鈕樣式</button>
-    <button class="rt-button rt-button-primary">預設按鈕樣式</button>
-    <button class="rt-button rt-button-secondary">預設按鈕樣式</button>
-    <button class="rt-button rt-button-inverse">預設按鈕樣式</button>
-    <button class="rt-button rt-button-danger">預設按鈕樣式</button>
-    <button class="rt-button rt-button-success">預設按鈕樣式</button>
+    <button class="rt-button">預設按鈕樣式</button><br>
+    <button class="rt-button rt-button-primary">預設按鈕樣式primary</button><br>
+    <button class="rt-button rt-button-secondary">預設按鈕樣式secondary</button><br>
+    <button class="rt-button rt-button-inverse">預設按鈕樣式inverse</button><br>
+    <button class="rt-button rt-button-danger">預設按鈕樣式danger</button><br>
+    <button class="rt-button rt-button-success">預設按鈕樣式success</button><br>
 
     <h2 class="rt-page-subtitle">表格</h2>
     <table>
@@ -55,16 +55,16 @@
     <h2 class="rt-page-subtitle">表單</h2>
     <form class="rt-form">
       <div class="rt-form-group">
-        <label class="rt-form-label" for="realName">姓名</label>
+        <label class="rt-form-label" for="realName"><b>姓名</b></label>
         <input class="rt-form-input" type="text" placeholder="例: 陳大天" id="realName">
       </div>
       <div class="rt-form-group rt-form-group-error">
-        <label class="rt-form-label" for="cellPhone">手機號碼</label>
+        <label class="rt-form-label" for="cellPhone"><b>手機號碼</b></label>
         <div class="rt-form-text rt-form-text-error">手機格式不正確!</div>
         <input class="rt-form-input" type="text" placeholder="0912345678" id="cellPhone">
       </div>
       <div class="rt-form-group rt-form-group-success">
-        <label class="rt-form-label" for="homePhone">住家電話</label>
+        <label class="rt-form-label" for="homePhone"><b>住家電話</b></label>
         <input class="rt-form-input" type="text" placeholder="02-4567812" id="homePhone">
         <p class="rt-form-text">選填</p>
       </div>
@@ -77,15 +77,15 @@
         </select>
       </div>
       <div class="rt-form-group">
-        <label class="rt-form-label" for="exampleMessage">Message</label>
+        <label class="rt-form-label" for="exampleMessage"><b>給賣家的話</b></label>
         <textarea class="rt-form-input" placeholder="Hi Dave …" id="exampleMessage"></textarea>
         <label class="rt-form-label">
           <input class="rt-form-input" type="checkbox">
-          <span class="rt-form-text">Send a copy to yourself</span>
+          <span class="rt-form-text">儲存為預設範本</span>
         </label>
       </div>
       <div class="rt-form-group">
-        <input class="rt-button rt-button-primary" type="submit" value="Submit">
+        <input class="rt-button rt-button-block rt-button-primary" type="submit" value="Submit">
       </div>
     </form>
   </div>
@@ -96,3 +96,9 @@ export default {
   name: 'showcase'
 }
 </script>
+
+<style>
+  br + .rt-button {
+    margin-top: 5px;
+  }
+</style>
