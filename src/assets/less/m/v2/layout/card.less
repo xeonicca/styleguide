@@ -1,0 +1,33 @@
+@import (reference) "../abstracts/variables.less";
+
+@card-border-radius: @component-border-radius;
+@card-border-color: @component-border-color;
+@card-background-shadow: @component-backdrop-shadow;
+@card-container-padding: 30px 25px 15px;
+@card-vertical-spacing: @default-main-horizontal-gutter;
+
+@card-title-fontsize: @medium-fontsize;
+@card-title-spacing: @default-main-horizontal-gutter;
+
+@card-body-fontsize: @regular-fontsize;
+
+.rt-card {
+  margin-bottom: @card-vertical-spacing;
+  padding: @card-container-padding;
+  // border: 1px solid @card-border-color;
+  border-radius: @card-border-radius;
+  box-shadow: @card-background-shadow;
+}
+
+.rt-card-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 0 15px;
+  font-size: @card-title-fontsize;
+}
+
+.rt-card-body {
+  padding-top: 15px;
+  font-size: @card-body-fontsize;
+}

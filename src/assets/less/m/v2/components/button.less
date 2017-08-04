@@ -1,18 +1,18 @@
 @import (reference) "../abstracts/variables.less";
 
-@button-background-color: #ecf0f1;
+@button-background-color: @default-color;
 @button-text-dark-color: @default-font-dark-color;
 @button-text-light-color: @default-font-light-color;
 @button-border-radus: @component-border-radius;
 @button-fontsize: @component-text-fontsize;
 
 @button-primary-color: @primary-color;
-@button-danger-color: @danger-color;
+@button-important-color: @important-color;
 @button-success-color: @success-color;
 @button-secondary-color: @secondary-color;
 @button-inverse-color: @inverse-color;
 
-@button-colors: button-primary-color, button-secondary-color, button-danger-color, button-success-color, button-inverse-color;
+@button-colors: button-primary-color, button-secondary-color, button-important-color, button-success-color, button-inverse-color;
 
 .ui-button-generator-mixin(@list) {
   @size: length(@list);
@@ -41,7 +41,7 @@
 .rt-button {
   display: inline-block;
   box-sizing: border-box;
-  padding: 8px 20px;
+  padding: 7px 20px 9px;
   border-radius: @button-border-radus;
   font-size: @button-fontsize;
   line-height: 20px;
@@ -49,6 +49,7 @@
   cursor: pointer;
   border: 0;
   -webkit-appearance: none;
+  box-shadow: inset 0px -1px rgba(0, 0, 0, 0.2);
   background-color: @button-background-color;
   color: contrast(@button-background-color, @button-text-dark-color, @button-text-light-color, 50%);
 }
@@ -58,7 +59,7 @@
 }
 
 .rt-outline-button {
-  
+
 }
 
 // Generate buttons of various purposes

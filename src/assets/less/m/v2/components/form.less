@@ -4,8 +4,8 @@
 @form-active-border-color: #3498db;
 @form-border-radius: @component-border-radius;
 
-@form-error-border-color: @danger-color;
-@form-error-color: @danger-color;
+@form-error-border-color: @important-color;
+@form-error-color: @important-color;
 
 @form-success-border-color: @success-color;
 @form-success-color: darken(@success-color, 10%);
@@ -96,18 +96,19 @@
 .rt-form-text-error {
   position: relative;
   right: 0;
-  bottom: 2px;
+  bottom: 4px;
   margin: 0;
-  padding: 6px 8px;
+  padding: 6px 8px 7px;
   background-color: @form-error-color;
   border-radius: @form-border-radius;
+  box-shadow: inset 0px -1px rgba(0, 0, 0, 0.3);
   color: #fff;
 
   &:before {
     content: '';
     position: absolute;
     right: 20px;
-    bottom: -12px;
+    bottom: -11px;
     border: 6px solid transparent;
     border-top-color: @form-error-color;
   }

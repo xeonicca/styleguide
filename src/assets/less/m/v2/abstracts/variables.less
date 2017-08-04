@@ -41,15 +41,16 @@
  * UI component color setting
  */
 
-// color settings
+// UI color settings
+@default-color: #ecf0f1;
 @primary-color: darken(@ruten-theme-color, 2%);
-@danger-color: #f25f5c;
+@important-color: #f25f5c;
 @success-color: #48cfad;
 @info-color: #c2eced;
 @secondary-color: #375AA4;
 @inverse-color: @ruten-theme-comliment-color;
 
-// for button content
+// UI font setting
 @component-text-fontsize: @regular-fontsize;
 
 @grayscale-start-color: #f2f2f2;
@@ -62,7 +63,7 @@
 
 // UI component block color setting
 @component-background-color: #fff;
-@component-backdrop-shadow: box-shadow: 0 3px 6px rgba(0,0,0,0.05), 0 3px 6px rgba(0,0,0,0.09);
+@component-backdrop-shadow: 0 3px 6px rgba(0,0,0,0.05), 0 3px 6px rgba(0,0,0,0.09);
 
 // RT icon color setting
 @default-icon-color: @default-font-dark-color;
@@ -75,60 +76,6 @@
 @default-border-top-color: #f3f3f3;
 @default-border-bottom-color: #f2f2f2;
 
-@base-background-color: #FFF;
-@header_height: 55px;
-@item_name_line_height: 1.3em;
-@item_name_maximum_allowed_row: 2;
-
-
-// Variable - main color
-// -----------------------------------------------------
-@primaryColor: #f39052;
-@errorColor: #ee4f4f;
-@successColor: #48cfad;
-@confirmColor: #2b913c;
-@priceColor: #FF0000;
-@alertColor: #FF0000;
-@textPrimaryColor: #FF7F50;
-@textDefaultColor: #000;
-@bidPriceColor: #0097FF;
-@defaultGrey: #ddd;
-
-
-// Variable - decoration color for theme promo and category
-// -------------------------------------------------------
-@decoLightBlueColor:   #80D7E4;
-@decoRedColor:         #f16d7a;
-@decoGreenColor:       #8BCEAF;
-@decoOrangeColor:      #ff9b6a;
-@decoPurpleColor:      #CE6AFF;
-@decoBlueColor:        #C1CFF5;
-@decoPinkColor:        #FFD9DE;
-@decoLightGreenColor:  #C4E2A4;
-@decoBrownColor:       #FFD8AC;
-@decoWhiteColor:       #FFF;
-
-
-// Variable - extended color
-// ---------------------------------------------
-@borderColor: @defaultGrey;
-@lightBorderColor: lighten(@defaultGrey, 5%);
-@disabledColor: darken(@defaultGrey, 10%);
-@subTextColor: darken(@defaultGrey, 30%);
-@fillColor: lighten(@defaultGrey, 10%);
-
-@subPriceColor: lighten(desaturate(@confirmColor, 15%), 5%);
-@purchaseColor: @errorColor;
-@addItemColor: @bidPriceColor;
-
-
-// Variable - border
-// --------------------------------------------------
-@defaultBorder: 1px solid @borderColor;
-@primaryBorder: 1px solid @primaryColor;
-@lightBorder: 1px solid @lightBorderColor;
-
-@mobile_new_sprite_path: "/images/mobile/new/mobile_sprite.png?20151015";
 
 // z-index-level (from low to high)
 // --------------------------------------------------

@@ -7,51 +7,67 @@
     <button class="rt-button rt-button-primary">預設按鈕樣式primary</button><br>
     <button class="rt-button rt-button-secondary">預設按鈕樣式secondary</button><br>
     <button class="rt-button rt-button-inverse">預設按鈕樣式inverse</button><br>
-    <button class="rt-button rt-button-danger">預設按鈕樣式danger</button><br>
+    <button class="rt-button rt-button-important">預設按鈕樣式important</button><br>
     <button class="rt-button rt-button-success">預設按鈕樣式success</button><br>
+    <hr>
+    <div class="rt-columns">
+      <div class="rt-column"><button class="rt-button rt-button-block">上一步</button></div>
+      <div class="rt-column"><button class="rt-button rt-button-primary rt-button-block">送出</button></div>
+    </div>
 
-    <h2 class="rt-page-subtitle">表格</h2>
-    <table>
-      <thead>
-        <tr>
-          <th></th>
-          <th>1週</th>
-          <th>1月</th>
-          <th>半年</th>
-          <th>全部</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>優良評價</td>
-          <td>50</td>
-          <td>244</td>
-          <td>1768</td>
-          <td>7824</td>
-        </tr>
-        <tr>
-          <td>普通評價</td>
-          <td>0</td>
-          <td>0</td>
-          <td>0</td>
-          <td>8</td>
-        </tr>
-        <tr>
-          <td>差勁評價</td>
-          <td>0</td>
-          <td>0</td>
-          <td>1</td>
-          <td>3</td>
-        </tr>
-        <tr>
-          <td>評價次數</td>
-          <td>50</td>
-          <td>244</td>
-          <td>1769</td>
-          <td>7835</td>
-        </tr>
-      </tbody>
-    </table>
+    <h2 class="rt-page-subtitle">標籤</h2>
+    <span class="label"></span>
+
+    <section class="rt-card">
+      <div class="rt-card-title">
+        <h3>ac02的賣場</h3>
+        <span class="rt-card-subtitle"><a class="rt-label rt-label-inverse" href="#">進入賣場</a></span>
+      </div>
+      <div class="rt-card-body">
+        <table>
+          <thead>
+            <tr>
+              <th></th>
+              <th>1週</th>
+              <th>1月</th>
+              <th>半年</th>
+              <th>全部</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>優良評價</td>
+              <td>50</td>
+              <td>244</td>
+              <td>1768</td>
+              <td>7824</td>
+            </tr>
+            <tr>
+              <td>普通評價</td>
+              <td>0</td>
+              <td>0</td>
+              <td>0</td>
+              <td>8</td>
+            </tr>
+            <tr>
+              <td>差勁評價</td>
+              <td>0</td>
+              <td>0</td>
+              <td>1</td>
+              <td>3</td>
+            </tr>
+            <tr>
+              <td>評價次數</td>
+              <td>50</td>
+              <td>244</td>
+              <td>1769</td>
+              <td>7835</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
     <h2 class="rt-page-subtitle">表單</h2>
     <form class="rt-form">
       <div class="rt-form-group">
