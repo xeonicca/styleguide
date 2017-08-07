@@ -47,7 +47,6 @@
 .rt-breadcrumb-home {
   box-sizing: border-box;
   height: @breadcrumb-height;
-  line-height: @breadcrumb-line-height;
   position: absolute;
   top: 0;
   left: 0;
@@ -59,6 +58,7 @@
 
   .rt-breadcrumb-link {
     width: @breadcrumb-home-width;
+    line-height: @breadcrumb-line-height;
     padding-left: 10px;
   }
 
@@ -78,10 +78,10 @@
 
 .rt-breadcrumb-node {
   display: inline-block;
+  height: 100%;
   padding-right: 5px;
   list-style-type: none;
   font-size: @breadcrumb-text-fontsize;
-  line-height: @breadcrumb-line-height;
   transition: all 500ms ~'cubic-bezier(0.215, 0.61, 0.355, 1)';
   &:last-child > .rt-breadcrumb-link {
     color: @ruten-theme-color;
@@ -94,6 +94,8 @@
 
 .rt-breadcrumb-link {
   display: inline-block;
+  height: 100%;
+  line-height: @breadcrumb-line-height;
   color: @breadcrumb-text-color;
 }
 

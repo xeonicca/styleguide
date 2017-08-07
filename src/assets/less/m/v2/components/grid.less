@@ -1,0 +1,31 @@
+@column-horizontal-padding: 5px;
+
+
+.rt-column {
+  display: block;
+  flex: 1 1 0;
+  padding: 0 @column-horizontal-padding;
+
+  &:first-child {
+    padding-left: 0;
+  }
+
+  &:last-child {
+    padding-right: 0;
+  }
+}
+
+.ui-flexgrid-generator(@space) when (@space > 0) {
+  .rt-column-@{space} {
+    flex: none;
+    width: (@space / 12) * 100%;
+  }
+
+  .ui-flexgrid-generator(@space - 1);
+}
+
+.ui-flexgrid-generator(12);
+
+.rt-columns {
+  display: flex;
+}

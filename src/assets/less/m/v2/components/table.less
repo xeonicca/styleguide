@@ -2,8 +2,10 @@
 
 @table-component-spacing: @default-main-vertical-gutter;
 @table-border-color: @component-border-color;
+@table-cell-padding: 12px 15px;
 
 table {
+  table-layout: fixed;
   border-collapse: collapse;
   border-spacing: 0;
   border: 0;
@@ -18,8 +20,9 @@ tr {
 
 th,
 td {
-  padding: 12px 15px;
+  padding: @table-cell-padding;
   text-align: left;
+  border-top: 0;
   border-bottom: 1px solid @table-border-color;
 
   @media (max-device-width: 320px) { //for iphone <=5

@@ -3,10 +3,19 @@
     <header>
       <rt-header></rt-header>
     </header>
+<<<<<<< HEAD
     <router-view></router-view>
     <footer>
       <rt-footer></rt-footer>
     </footer>
+=======
+    <rt-breadcrumb></rt-breadcrumb>
+<!--     <router-link to="/">Home</router-link>/
+    <router-link to="register">Register page</router-link> -->
+    <main>
+      <router-view></router-view>
+    </main>
+>>>>>>> ad8b4e6d266d5483276b4e55ce0c70f28e2ab242
   </div>
 </template>
 

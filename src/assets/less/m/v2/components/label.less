@@ -1,0 +1,54 @@
+@label-border-radius: @component-border-radius;
+@label-default-background-color: @default-color;
+@label-text-dark-color: @default-font-dark-color;
+@label-text-light-color: @default-font-light-color;
+
+@label-primary-color: @primary-color;
+@label-important-color: @important-color;
+@label-success-color: @success-color;
+@label-secondary-color: @secondary-color;
+@label-info-color: @info-color;
+@label-inverse-color: @inverse-color;
+
+@label-colors: label-primary-color, label-secondary-color, label-important-color, label-success-color, label-info-color, label-inverse-color;
+@label-font-size: @small-fontsize;
+
+.rt-label {
+  display: inline-block;
+  padding: 6px 8px 7px;
+  background-color: @form-error-color;
+  border-radius: @form-border-radius;
+  box-shadow: inset 0px -1px rgba(0, 0, 0, 0.3);
+  color: contrast(@button-background-color, @label-text-dark-color, @label-text-light-color);
+  background-color: @button-background-color;
+  font-size: @label-font-size;
+
+  + .rt-label {
+    margin-left: 5px;
+  }
+}
+
+.ui-label-generator-mixin(@list) {
+  @size: length(@list);
+
+  .ui-label(@variable) {
+    @color-variable: @@variable;
+    @modifier: replace(@variable, '^label-|-color$', '', 'g');
+
+    .rt-label-@{modifier} {
+      background-color: @color-variable;
+      color: contrast(@color-variable, @label-text-dark-color, @label-text-light-color, 50%);
+    }
+  }
+
+  ._(@counter) when (@counter <= @size) {
+    @color-variable: extract(@list, @counter);
+    .ui-label(@color-variable);
+    ._(@counter+1);
+  }
+
+  ._(1);
+}
+
+// Generate label of various purposes
+.ui-label-generator-mixin(@label-colors);
