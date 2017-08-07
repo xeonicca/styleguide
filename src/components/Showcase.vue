@@ -1,27 +1,37 @@
 <template>
-  <div class="rt-page">
-    <h1 class="rt-page-title">M版v2樣式調整</h1>
+<div>
+  <div class="rt-section">
+    <h1 class="rt-section-title">M版v2樣式調整</h1>
     <hr>
-    <h2 class="rt-page-subtitle">按鈕</h2>
+    <h2 class="rt-section-subtitle">按鈕</h2>
     <button class="rt-button">預設按鈕樣式</button><br>
     <button class="rt-button rt-button-primary">預設按鈕樣式primary</button><br>
     <button class="rt-button rt-button-secondary">預設按鈕樣式secondary</button><br>
     <button class="rt-button rt-button-inverse">預設按鈕樣式inverse</button><br>
     <button class="rt-button rt-button-important">預設按鈕樣式important</button><br>
     <button class="rt-button rt-button-success">預設按鈕樣式success</button><br>
+
+    <button class="rt-button rt-button-hallow rt-button-primary">預設按鈕樣式primary</button><br>
+    <button class="rt-button rt-button-hallow rt-button-secondary">預設按鈕樣式secondary</button><br>
+    <button class="rt-button rt-button-hallow rt-button-inverse">預設按鈕樣式inverse</button><br>
+    <button class="rt-button rt-button-hallow rt-button-important">預設按鈕樣式important</button><br>
+    <button class="rt-button rt-button-hallow rt-button-success">預設按鈕樣式success</button><br>
     <hr>
     <div class="rt-columns">
       <div class="rt-column"><button class="rt-button rt-button-block">上一步</button></div>
       <div class="rt-column"><button class="rt-button rt-button-primary rt-button-block">送出</button></div>
     </div>
 
-    <h2 class="rt-page-subtitle">標籤</h2>
-    <span class="label"></span>
 
+    <h2 class="rt-section-subtitle">標籤</h2>
+    <span class="rt-label rt-label-important">已下架</span><span class="rt-label rt-label-secondary">庫存不足</span><span class="rt-label  rt-label-success">規格更新</span>
+  </div>
+  <div class="rt-section rt-section-alt">
+    <h2 class="rt-section-subtitle">Card</h2>
     <section class="rt-card">
       <div class="rt-card-title">
         <h3>ac02的賣場</h3>
-        <span class="rt-card-subtitle"><a class="rt-label rt-label-inverse" href="#">進入賣場</a></span>
+        <a class="rt-card-subtitle" href="#">進入賣場</a>
       </div>
       <div class="rt-card-body">
         <table>
@@ -36,7 +46,7 @@
           </thead>
           <tbody>
             <tr>
-              <td>優良評價</td>
+              <td width="100">優良評價</td>
               <td>50</td>
               <td>244</td>
               <td>1768</td>
@@ -67,22 +77,23 @@
         </table>
       </div>
     </section>
-
-    <h2 class="rt-page-subtitle">表單</h2>
+  </div>
+  <div class="rt-section">
+    <h2 class="rt-section-subtitle">表單</h2>
     <form class="rt-form">
       <div class="rt-form-group">
         <label class="rt-form-label" for="realName"><b>姓名</b></label>
         <input class="rt-form-input" type="text" placeholder="例: 陳大天" id="realName">
       </div>
       <div class="rt-form-group rt-form-group-error">
-        <label class="rt-form-label" for="cellPhone"><b>手機號碼</b></label>
+        <label class="rt-form-label" for="cellPhone"><b>手機號碼</b>*</label>
         <div class="rt-form-text rt-form-text-error">手機格式不正確!</div>
         <input class="rt-form-input" type="text" placeholder="0912345678" id="cellPhone">
       </div>
       <div class="rt-form-group rt-form-group-success">
-        <label class="rt-form-label" for="homePhone"><b>住家電話</b></label>
+        <label class="rt-form-label" for="homePhone"><b>住家電話</b><p class="rt-form-text">選填</p></label>
         <input class="rt-form-input" type="text" placeholder="02-4567812" id="homePhone">
-        <p class="rt-form-text">選填</p>
+
       </div>
       <div class="rt-form-group">
         <label class="rt-form-label" for="exampleRecipientInput">Reason for contacting</label>
@@ -105,6 +116,7 @@
       </div>
     </form>
   </div>
+</div>
 </template>
 
 <script>

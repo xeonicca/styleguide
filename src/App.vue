@@ -4,7 +4,8 @@
       <rt-header></rt-header>
     </header>
     <rt-breadcrumb></rt-breadcrumb>
-    <rt-tab></rt-tab>
+<!--     <router-link to="/">Home</router-link>/
+    <router-link to="register">Register page</router-link> -->
     <main>
       <router-view></router-view>
     </main>

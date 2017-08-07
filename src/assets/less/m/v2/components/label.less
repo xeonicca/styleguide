@@ -37,7 +37,7 @@
 
     .rt-label-@{modifier} {
       background-color: @color-variable;
-      color: @label-text-light-color;
+      color: contrast(@color-variable, @label-text-dark-color, @label-text-light-color, 50%);
     }
   }
 
