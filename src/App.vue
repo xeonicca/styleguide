@@ -3,29 +3,30 @@
     <header>
       <rt-header></rt-header>
     </header>
-    <rt-breadcrumb></rt-breadcrumb>
-    <rt-tab></rt-tab>
-    <main>
-      <router-view></router-view>
-    </main>
+    <router-view></router-view>
+    <footer>
+      <rt-footer></rt-footer>
+    </footer>
   </div>
 </template>
 
 <script>
 import header from '@/components/Header'
-import tab from '@/components/Tab'
-import breadcrumb from '@/components/Breadcrumb'
+import footer from '@/components/Footer'
 
 export default {
   name: 'app',
   components: {
     'rt-header': header,
-    'rt-tab': tab,
-    'rt-breadcrumb': breadcrumb
+    'rt-footer': footer,
   }
 }
 </script>
 
 <style lang="less">
 @import 'assets/less/m/v2/style-base.less';
+
+#app {
+  height: 100%;
+}
 </style>
