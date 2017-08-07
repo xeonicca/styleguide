@@ -1,0 +1,58 @@
+@import (reference) "../abstracts/variables.less";
+
+@footer-padding: 20px 20px 10px;
+@footer-background: @ruten-theme-comliment-color;
+@footer-text-color: @default-font-compliment-color;
+
+@footer-logo-width: 65px;
+@footer-logo-height: @logo-width / 2;
+
+.rt-footer {
+  padding: @footer-padding;
+  background-color: @ruten-theme-comliment-color;
+  color: @footer-text-color;
+}
+
+.rt-footer-title {
+  text-align: center;
+  padding: 5px 0;
+  font-size: @small-fontsize;
+}
+
+.rt-footer-subtitle {
+  font-size: @small-fontsize;
+}
+
+.rt-footer-links {
+  display: flex;
+  margin: 0;
+  padding: 15px 0;
+  list-style: none;
+  justify-content: center;
+
+  > li + li {
+    padding-left: 10px;
+
+    &:before {
+      content: '/';
+      padding-right: 10px;
+    }
+  }  
+}
+
+.rt-footer-logo {
+  .icon-background-generator(RUTEN);
+  display: inline-block;
+  vertical-align: middle;
+  width: @footer-logo-width;
+  height: @footer-logo-height;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-size: @logo-width @logo-height;
+}
+
+.rt-footer-link {
+  display: inline-block;
+  color: @footer-text-color;
+  font-size: @small-fontsize;
+}

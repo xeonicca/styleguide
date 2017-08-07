@@ -1,6 +1,6 @@
 @import (reference) "../abstracts/variables.less";
 
-@table-component-spacing: @default-main-vertical-gutter;
+@table-component-spacing: @base-spacing;
 @table-border-color: @component-border-color;
 @table-cell-padding: 12px 15px;
 
@@ -30,12 +30,16 @@ td {
   }
 }
 
+th {
+  letter-spacing: -0.6px;
+}
+
 th:first-child,
 td:first-child {
-  padding-left: 0;
+  padding-left: 5px;
 }
 
 th:last-child,
 td:last-child {
-  padding-right: 0;
+  padding-right: 5px;
 }

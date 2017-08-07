@@ -1,0 +1,17 @@
+.pane-enter-active {
+  animation: moveToLeft .6s ease both;
+}
+
+.pane-leave-active {
+  animation: moveToRight .6s ease both;
+}
+
+
+@keyframes moveToLeft {
+  from { }
+  to { -webkit-transform: translateX(-100%); transform: translateX(-100%); }
+}
+
+@keyframes moveFromRight {
+  from { -webkit-transform: translateX(100%); transform: translateX(100%); }
+}

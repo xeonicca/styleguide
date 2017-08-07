@@ -1,5 +1,5 @@
 <template>
-<main class="rt-section">
+<main class="rt-section rt-section-a">
   <h2 class="rt-section-title">註冊一般會員</h2>
   <div class="rt-form">
     <div class="rt-form-group">
