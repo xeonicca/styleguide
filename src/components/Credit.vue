@@ -91,7 +91,7 @@
       <div class="comment-body">
         <div class="comment-title"><a href="#">{{comment.gname}}</a></div>
 
-        <p class="comment-body-text">{{comment.comment}}</p>
+        <p v-for="buyerComment in comment.comment" class="comment-body-text">{{buyerComment}}</p>
 
       </div>
 
@@ -102,7 +102,7 @@
       </div>
 
       <div class="comment-subtitle">
-        <div>{{comment.buyerId}} ({{comment.buyerCredit}})</div>
+        <div><b>{{comment.buyerId}}</b> ({{comment.buyerCredit}})</div>
         <div class="comment-date">{{comment.commentDate}}</div>
       </div>
     </div>
@@ -124,7 +124,7 @@ export default {
           buyerCredit: '456',
           rate: 'good',
           commentDate: '2017-05-09',
-          comment: '值得推薦的好賣家!!!'
+          comment: ['值得推薦的好賣家!!!']
         },
         {
           gname: '爆亮故障警示燈手電筒 終極版磁吸LED行動燈管',
@@ -132,7 +132,7 @@ export default {
           buyerCredit: '236',
           rate: 'bad',
           commentDate: '2017-05-09',
-          comment: '值得推薦的好賣家!!!'
+          comment: ['看似完美，老師好我是網頁設計課的同學', '請他的交通大學資訊工程系朋友幫忙他', '我們有僑外及國內民間投資', '在三年多以前的那8年是事實啊！']
         },
         {
           gname: '正鴻機車行 機車小U方天戟 手機車架手機架 RACING S',
@@ -140,7 +140,7 @@ export default {
           buyerCredit: '874',
           rate: 'soso',
           commentDate: '2017-05-09',
-          comment: '謝謝,交易愉快!!希望還有機會跟您買東西...'
+          comment: ['謝謝,交易愉快!!希望還有機會跟您買東西...']
         },
         {
           gname: '├登山樂┤CAMPLAND 火烽焚火台鑄鐵烤盤 #P086-ST390',
