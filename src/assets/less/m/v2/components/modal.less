@@ -12,6 +12,7 @@
 @modal-body-spacing: @large-spacing;
 
 .rt-modal {
+  display: none;
   position: fixed;
   top: 0;
   right: 0;
@@ -19,9 +20,12 @@
   left: 0;
   background-color: @modal-wrap-background;
   z-index: @modal-wrap-zindex;
-  display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.rt-modal-show {
+  display: flex;
 }
 
 
