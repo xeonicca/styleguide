@@ -16,7 +16,7 @@
     @modifier: replace(@variable, '^text-|-color$', '', 'g');
 
     .rt-text-@{modifier} {
-      color: darken(@color-variable, 5%);
+      color: @color-variable;
     }
   }
 

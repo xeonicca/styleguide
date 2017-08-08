@@ -3,9 +3,9 @@
 
 @subtitle-color: @default-font-compliment-color;
 
-.colored-icon-generator(smile-o, success-color);
-.colored-icon-generator(meh-o, inverse-color);
-.colored-icon-generator(frown-o, important-color);
+.colored-icon-generator(joy, success-color);
+.colored-icon-generator(meh, secondary-color);
+.colored-icon-generator(mad, important-color);
 .colored-icon-generator(arrow-right, subtitle-color);
 
 .comment {
@@ -27,13 +27,18 @@
 .comment-body {
   // display: flex;
   flex: 1 1 0;
-  padding-right: 20px;
+  margin-left: 20px;
+  margin-bottom: 10px;
 }
 
 .comment-title {
+  display: block;
   margin-bottom: 5px;
   font-size: @regular-fontsize;
-  color: @default-font-compliment-color;
+  color: @default-font-dark-color;
+  font-weight: 700;
+  letter-spacing: -0.6px;
+  line-height: 1.2;
 }
 
 .comment-subtitle {
@@ -53,6 +58,6 @@
 
 .comment-body-text {
   padding: 3px 0 5px;
-  line-height: 1.7;
+  line-height: 1.4;
   font-size: @small-fontsize;
 }

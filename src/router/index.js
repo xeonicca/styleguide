@@ -1,10 +1,10 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Showcase from '@/components/Showcase'
-import Multipane from '@/components/Multipane'
-import Register from '@/components/Register'
-import Login from '@/components/Login'
-import Credit from '@/components/Credit'
+import Showcase from '@/pages/Showcase'
+import Multipane from '@/pages/Multipane'
+import Register from '@/pages/Register'
+import Login from '@/pages/Login'
+import Credit from '@/pages/Credit'
 
 Vue.use(Router)
 

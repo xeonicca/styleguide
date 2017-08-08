@@ -1,0 +1,51 @@
+@import (reference) "../abstracts/variables.less";
+
+@modal-wrap-background: fade(@ruten-theme-comliment-color, 20%);
+@modal-container-background: @component-background-color;
+
+@modal-wrap-zindex: 0;
+@modal-container-zindex: 1;
+
+@modal-container-width: 350px;
+
+@modal-title-spacing: @base-spacing;
+@modal-body-spacing: @large-spacing;
+
+.rt-modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: @modal-wrap-background;
+  z-index: @modal-wrap-zindex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.rt-modal-container {
+  box-sizing: border-box;
+  padding: 30px 25px 20px;
+  max-width: @modal-container-width;
+  max-height: 80%;
+  z-index: @modal-container-zindex;
+  background-color: @modal-container-background;
+  box-shadow: 0 12px 24px 0 rgba(0, 0, 0, 0.1);
+}
+
+.rt-modal-header {
+  font-size: @medium-fontsize;
+  margin-bottom: @modal-title-spacing;
+  letter-spacing: -0.6px;
+}
+
+.rt-modal-body {
+  margin-bottom: @modal-body-spacing;
+  line-height: 1.4;
+}
+
+.rt-modal-footer {
+
+}

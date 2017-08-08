@@ -38,15 +38,26 @@
       </label>
     </div>
     <div class="rt-form-group">
-      <input class="rt-button rt-button-block rt-button-primary" type="submit" value="確定資料無誤送出">
+      <input class="rt-button rt-button-block rt-button-primary" type="submit" value="確定資料無誤送出" @click="showModal">
     </div>
   </div>
+
+  <rt-modal></rt-modal>
 </main>
 </template>
 
 <script>
+import modal from '@/components/Modal'
 export default {
-  name: 'register'
+  name: 'register',
+  components: {
+    'rt-modal': modal
+  },
+  methods: {
+    showModal() {
+      
+    }
+  }
 }
 </script>
 
