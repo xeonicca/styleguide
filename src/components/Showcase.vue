@@ -93,7 +93,10 @@
       <div class="rt-form-group rt-form-group-success">
         <label class="rt-form-label" for="homePhone">住家電話<p class="rt-form-text">選填</p></label>
         <input class="rt-form-input" type="text" placeholder="02-4567812" id="homePhone">
-
+      </div>
+      <div class="rt-form-group">
+        <label class="rt-form-label" for="officePhone">公司電話<p class="rt-form-text">選填</p></label>
+        <input class="rt-form-input" type="text" placeholder="02-4567812" id="officePhone" disabled>
       </div>
       <div class="rt-form-group">
         <label class="rt-form-label" for="exampleRecipientInput">Reason for contacting</label>

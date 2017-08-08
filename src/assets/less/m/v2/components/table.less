@@ -1,8 +1,9 @@
 @import (reference) "../abstracts/variables.less";
 
 @table-component-spacing: @base-spacing;
-@table-border-color: @component-border-color;
-@table-cell-padding: 12px 15px;
+@table-border-color: lighten(@component-border-color, 10%);
+@table-cell-padding: 12px 10px;
+@table-cell-fontsize: @small-fontsize;
 
 table {
   table-layout: fixed;
@@ -24,22 +25,25 @@ td {
   text-align: left;
   border-top: 0;
   border-bottom: 1px solid @table-border-color;
+  font-size: @table-cell-fontsize;
 
   @media (max-device-width: 320px) { //for iphone <=5
-    padding: 12px 10px;
+    padding: 12px 8px;
   }
 }
 
-th {
-  letter-spacing: -0.6px;
+tbody> tr:last-child {
+  > td, > th {
+    border-bottom: 0;
+  }
 }
 
 th:first-child,
 td:first-child {
-  padding-left: 5px;
+  padding-left: 0;
 }
 
 th:last-child,
 td:last-child {
-  padding-right: 5px;
+  padding-right: 0;
 }

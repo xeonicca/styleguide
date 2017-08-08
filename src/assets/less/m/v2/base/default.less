@@ -1,21 +1,31 @@
 @import (reference) "../abstracts/variables.less";
 @import (reference) "../base/reset.less";
 
-html, body {
+html {
   height: 100%;
 }
 
 body {
+  min-height: 100%;
+  position: relative;
   background-color: @default-background-color;
   color: @default-font-dark-color;
+  padding-bottom: 10rem;
 }
 
 body, input, button {
   font-family: @default-text-fontface;
 }
 
+footer {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
 // anchors
-@clickable-link-color: @secondary-color;
+@clickable-link-color: saturate(lighten(@secondary-color, 10%), 20%);
 a {
   color: @clickable-link-color;
   text-decoration: none;
@@ -23,7 +33,7 @@ a {
 
 // page content
 .rt-section {
-  padding: 10px 24px 30px;
+  padding: 10px 24px 10px;
 
   @media (max-device-width: 320px) { //for iphone <=5
     padding: 10px 15px 30px;
@@ -32,6 +42,29 @@ a {
 
 .rt-section-alt {
   background: @grayscale-background-color;
+  border-bottom: 1px solid @grayscale-start-color;
+}
+
+@page-title-spacing: 20px;
+@page-subtitle-spacing: @page-title-spacing * 0.75;
+
+.rt-section-title {
+  font-size: @medium-fontsize;
+  line-height: 1.5;
+  letter-spacing: -1px;
+  margin-top: @page-title-spacing * 0.75;
+  margin-bottom: @page-title-spacing;
+}
+
+.rt-section-subtitle {
+  font-size: @regular-fontsize;
+  margin-top: @page-title-spacing * 0.75;
+  margin-bottom: @page-title-spacing;
+}
+
+.rt-section-content {
+  font-size: @regular-fontsize;
+  line-height: 1.7;
 }
 
 // divider

@@ -22,9 +22,12 @@
     @modifier: replace(@variable, '^button-|-color$', '', 'g');
 
     .rt-button-@{modifier} {
+      // @backdrop-color-1: fade(darken(@color-variable, 20%), 15%);
+      // @backdrop-color-2: fade(darken(@color-variable, 20%), 19%);
       background-color: @color-variable;
       // color: contrast(@color-variable, @button-text-dark-color, @button-text-light-color, 50%);
       color: @button-text-light-color;
+      // box-shadow: 0 3px 6px @backdrop-color-1, 0 3px 6px @backdrop-color-2;
     }
 
     .rt-button-hallow.rt-button-@{modifier} {
@@ -56,6 +59,7 @@
   border: 0;
   -webkit-appearance: none;
   box-shadow: inset 0px -1px rgba(0, 0, 0, 0.2);
+  // box-shadow: @component-backdrop-shadow;
   background-color: @button-background-color;
   color: contrast(@button-background-color, @button-text-dark-color, @button-text-light-color, 50%);
 }

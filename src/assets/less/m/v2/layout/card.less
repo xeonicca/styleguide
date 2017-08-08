@@ -4,8 +4,7 @@
 @card-border-color: @component-border-color;
 @card-background-shadow: @component-backdrop-shadow;
 @card-background-color: @component-background-color;
-@card-title-padding: 30px 35px 10px;
-@card-body-padding: 15px 30px 15px;
+@card-padding: 15px 30px 15px;
 @card-vertical-spacing: @base-spacing;
 
 @card-title-fontsize: @medium-fontsize;
@@ -22,22 +21,25 @@
   border-radius: @card-border-radius;
   box-shadow: @card-background-shadow;
   background-color: @card-background-color;
+  padding: @card-padding;
 }
 
 .rt-card-title {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  padding: @card-title-padding;
   font-size: @card-title-fontsize;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 
 .rt-card-subtitle {
   font-size: @card-subtitle-fontsize;
   color: @card-subtitle-color;
+  // margin-bottom: 10px;
 }
 
 .rt-card-body {
-  padding: @card-body-padding;
+  padding-top: 15px;
   font-size: @card-body-fontsize;
 }

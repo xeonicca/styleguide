@@ -26,14 +26,23 @@
 
 .rt-form {
   margin-bottom: @form-gutter;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .rt-form-group {
   display: flex;
+  // padding: 0 10px;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   margin-bottom: @form-component-gutter;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .rt-form-input {
@@ -69,6 +78,10 @@
 
   &[type=checkbox], &[type=radio] {
     vertical-align: middle;
+  }
+
+  &:disabled {
+    background-color: lighten(@form-border-color, 12%);
   }
 }
 

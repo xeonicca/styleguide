@@ -1,6 +1,7 @@
 <template>
-<main class="rt-section rt-section-a">
+<main class="rt-section">
   <h2 class="rt-section-title">註冊一般會員</h2>
+  <hr>
   <div class="rt-form">
     <div class="rt-form-group">
       <label class="rt-form-label" for="username">帳號*</label>

@@ -1,24 +1,32 @@
 @import (reference) "../abstracts/variables.less";
 @import (reference) "../abstracts/functions.less";
 
-@page-title-spacing: 20px;
-@page-subtitle-spacing: @page-title-spacing * 0.75;
+@text-primary-color: @primary-color;
+@text-important-color: @important-color;
+@text-success-color: @success-color;
+@text-secondary-color: @secondary-color;
+@text-inverse-color: @inverse-color;
+@text-colors: text-primary-color, text-secondary-color, text-important-color, text-success-color, text-inverse-color;
 
-.rt-section-title {
-  font-size: @medium-fontsize;
-  line-height: 1.5;
-  letter-spacing: -1px;
-  margin-top: @page-title-spacing * 0.75;
-  margin-bottom: @page-title-spacing;
+.ui-text-generator-mixin(@list) {
+  @size: length(@list);
+
+  .ui-text(@variable) {
+    @color-variable: @@variable;
+    @modifier: replace(@variable, '^text-|-color$', '', 'g');
+
+    .rt-text-@{modifier} {
+      color: darken(@color-variable, 5%);
+    }
+  }
+
+  ._(@counter) when (@counter <= @size) {
+    @color-variable: extract(@list, @counter);
+    .ui-text(@color-variable);
+    ._(@counter+1);
+  }
+
+  ._(1);
 }
 
-.rt-section-subtitle {
-  font-size: @regular-fontsize;
-  margin-top: @page-title-spacing * 0.75;
-  margin-bottom: @page-title-spacing;
-}
-
-.rt-section-content {
-  font-size: @regular-fontsize;
-  line-height: 1.7;
-}
+.ui-text-generator-mixin(@text-colors);

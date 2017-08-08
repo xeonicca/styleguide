@@ -1,15 +1,17 @@
 @import (reference) "../abstracts/variables.less";
 
 @footer-padding: 20px 20px 10px;
-@footer-background: @ruten-theme-comliment-color;
-@footer-text-color: @default-font-compliment-color;
+@footer-background: #babcbd;
+@footer-text-color: #6a7073;
 
-@footer-logo-width: 65px;
+@footer-logo-width: 56px;
 @footer-logo-height: @logo-width / 2;
+
+@footer-link-spacing: 6px;
 
 .rt-footer {
   padding: @footer-padding;
-  background-color: @ruten-theme-comliment-color;
+  background-color: @footer-background;
   color: @footer-text-color;
 }
 
@@ -31,13 +33,13 @@
   justify-content: center;
 
   > li + li {
-    padding-left: 10px;
+    padding-left: @footer-link-spacing;
 
     &:before {
       content: '/';
-      padding-right: 10px;
+      padding-right: @footer-link-spacing;
     }
-  }  
+  }
 }
 
 .rt-footer-logo {
@@ -48,11 +50,10 @@
   height: @footer-logo-height;
   background-size: contain;
   background-repeat: no-repeat;
-  background-size: @logo-width @logo-height;
 }
 
 .rt-footer-link {
   display: inline-block;
   color: @footer-text-color;
-  font-size: @small-fontsize;
+  font-size: @tiny-fontsize;
 }

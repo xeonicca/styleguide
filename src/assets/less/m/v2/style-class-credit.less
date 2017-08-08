@@ -1,5 +1,55 @@
 @import (reference) "abstracts/variables.less";
+@import (reference) "abstracts/functions.less";
 
-.rt-header-form, .rt-nav, .rt-category {
-  display: none;
+.colored-icon-generator(smile-o, success-color);
+.colored-icon-generator(meh-o, inverse-color);
+.colored-icon-generator(frown-o, important-color);
+
+.comment {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 15px 5px;
+  align-items: flex-start;
+  border-bottom: 1px solid @component-border-color;
+
+  &:last-child {
+    border-bottom: 0;
+  }
+}
+
+.comment-icon {
+  flex: 0 0 30px;
+}
+
+.comment-body {
+  // display: flex;
+  flex: 1 1 0;
+  padding-right: 20px;
+}
+
+.comment-title {
+  margin-bottom: 5px;
+  font-size: @regular-fontsize;
+  color: @default-font-compliment-color;
+}
+
+.comment-subtitle {
+  display: flex;
+  flex: 0 0 100%;
+  align-items: flex-end;
+  justify-content: flex-end;
+  font-size: @regular-fontsize;
+  color: @default-font-compliment-color;
+}
+
+.comment-date {
+  font-size: @small-fontsize;
+  color: @default-font-compliment-color;
+  margin-left: 10px;
+}
+
+.comment-body-text {
+  padding: 5px 0 8px;
+  line-height: 1.7;
+  font-size: @small-fontsize;
 }
