@@ -22,6 +22,11 @@
   box-shadow: @card-background-shadow;
   background-color: @card-background-color;
   padding: @card-padding;
+
+  @media (max-device-width: 320px) { //for iphone <=5
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }
 
 .rt-card-title {

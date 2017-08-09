@@ -22,12 +22,11 @@
     @modifier: replace(@variable, '^button-|-color$', '', 'g');
 
     .rt-button-@{modifier} {
-      // @backdrop-color-1: fade(darken(@color-variable, 20%), 15%);
-      // @backdrop-color-2: fade(darken(@color-variable, 20%), 19%);
+      @backdrop-color: fade(darken(@color-variable, 60%), 15%);
       background-color: @color-variable;
       // color: contrast(@color-variable, @button-text-dark-color, @button-text-light-color, 50%);
       color: @button-text-light-color;
-      // box-shadow: 0 3px 6px @backdrop-color-1, 0 3px 6px @backdrop-color-2;
+      box-shadow: inset 0px -1px @backdrop-color;
     }
 
     .rt-button-hallow.rt-button-@{modifier} {

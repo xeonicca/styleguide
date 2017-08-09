@@ -42,7 +42,7 @@
     </div>
   </div>
 
-  <rt-modal></rt-modal>
+  <rt-modal ref="testModal"></rt-modal>
 </main>
 </template>
 
@@ -55,7 +55,7 @@ export default {
   },
   methods: {
     showModal() {
-      
+      this.$refs['testModal'].$el.classList.add('rt-modal-show')
     }
   }
 }

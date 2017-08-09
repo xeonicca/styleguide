@@ -3,7 +3,7 @@
   <div class="rt-section rt-section-alt">
     <section class="rt-card">
       <div class="rt-card-title">
-        <h3>ac02的賣場</h3>
+        <h2>ac02的賣場</h2>
         <a class="rt-card-subtitle" href="#"><span class="vmiddle">進入賣場</span>&nbsp;<i class="rti rti-arrow-right-subtitle"></i></a>
       </div>
       <div class="rt-card-subtitle">
@@ -13,7 +13,7 @@
         <table>
           <thead>
             <tr>
-              <th width="80"></th>
+              <th width="70"></th>
               <th>1週</th>
               <th>1月</th>
               <th>半年</th>
@@ -86,8 +86,8 @@
   </div>
 
   <section class="rt-section">
+    <h2 class="rt-seo">賣東西評論</h2>
     <div class="comment" v-for="comment in comments">
-
       <div class="comment-icon">
         <span v-if="comment.rate === 'good'" class="rti rti-2x rti-joy-success"></span>
         <span v-if="comment.rate === 'bad'" class="rti rti-2x rti-mad-important"></span>
@@ -100,7 +100,7 @@
 
       </div>
 
-      
+
 
       <div class="comment-subtitle">
         <div><b>{{comment.buyerId}}</b> ({{comment.buyerCredit}})</div>

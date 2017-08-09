@@ -26,7 +26,7 @@
     <h2 class="rt-section-title">標籤</h2>
     <span class="rt-label rt-label-important">已下架</span><span class="rt-label rt-label-secondary">庫存不足</span><span class="rt-label  rt-label-success">規格更新</span>
   </div>
-  <div class="rt-section rt-section-alt">
+  <div class="rt-section">
     <h2 class="rt-section-title">Card</h2>
     <section class="rt-card">
       <div class="rt-card-title">
