@@ -1,5 +1,7 @@
+@import (reference) "../abstracts/variables.less";
+
 @label-border-radius: @component-border-radius;
-@label-default-background-color: @default-color;
+@label-border-color: @component-border-color;
 @label-text-dark-color: @default-font-dark-color;
 @label-text-light-color: @default-font-light-color;
 
@@ -16,11 +18,10 @@
 .rt-label {
   display: inline-block;
   padding: 6px 8px 7px;
-  background-color: @form-error-color;
-  border-radius: @form-border-radius;
-  box-shadow: inset 0px -1px rgba(0, 0, 0, 0.3);
-  color: contrast(@button-background-color, @label-text-dark-color, @label-text-light-color);
-  background-color: @button-background-color;
+  background-color: #fff;
+  border: 1px solid @label-border-color;
+  border-radius: @label-border-radius;
+  color: @label-text-dark-color;
   font-size: @label-font-size;
   line-height: 1;
   vertical-align: middle;
@@ -38,8 +39,8 @@
     @modifier: replace(@variable, '^label-|-color$', '', 'g');
 
     .rt-label-@{modifier} {
-      background-color: @color-variable;
-      color: contrast(@color-variable, @label-text-dark-color, @label-text-light-color, 50%);
+      border-color: @color-variable;
+      color: @color-variable;
     }
   }
 
