@@ -9,8 +9,8 @@
       </div>
       <div class="rt-modal-footer">
         <div class="rt-columns">
-          <div class="rt-column rt-column-6"><button class="rt-button rt-button-block rt-button-default">關閉</button></div>
-          <div class="rt-column rt-column-6"><button class="rt-button rt-button-block rt-button-primary">確定</button></div>
+          <div class="rt-column rt-column-6"><button class="rt-button rt-button-block rt-button-default" @click="closeModal">關閉</button></div>
+          <div class="rt-column rt-column-6"><button class="rt-button rt-button-block rt-button-primary" @click="closeModal">確定</button></div>
         </div>
       </div>
     </div>
@@ -20,6 +20,11 @@
 <script>
 // import tab from '@/components/Tab'
 export default {
-  name: 'modal'
+  name: 'modal',
+  methods: {
+    closeModal() {
+      this.$el.classList.remove('rt-modal-show')
+    }
+  }
 }
-</sciprt>
+</script>

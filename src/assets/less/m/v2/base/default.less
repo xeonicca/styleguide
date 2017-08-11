@@ -41,8 +41,13 @@ a {
 }
 
 .rt-section-alt {
+  padding: 25px 30px 10px;
   background: @grayscale-background-color;
   border-bottom: 1px solid @grayscale-start-color;
+
+  @media (max-device-width: 320px) { //for iphone <=5
+    padding: 20px;
+  }
 }
 
 @page-title-spacing: 20px;

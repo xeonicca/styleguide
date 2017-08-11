@@ -11,6 +11,13 @@
     <button class="rt-button rt-button-important">預設按鈕樣式important</button><br>
     <button class="rt-button rt-button-success">預設按鈕樣式success</button><br>
 
+    <!-- <button class="rt-link">預設按鈕樣式</button><br>
+    <button class="rt-link rt-link-primary">預設按鈕樣式primary</button><br>
+    <button class="rt-link rt-link-secondary">預設按鈕樣式secondary</button><br>
+    <button class="rt-link rt-link-inverse">預設按鈕樣式inverse</button><br>
+    <button class="rt-link rt-link-important">預設按鈕樣式important</button><br>
+    <button class="rt-link rt-link-success">預設按鈕樣式success</button><br> -->
+
     <!-- <button class="rt-button rt-button-hallow rt-button-primary">預設按鈕樣式primary</button><br>
     <button class="rt-button rt-button-hallow rt-button-secondary">預設按鈕樣式secondary</button><br>
     <button class="rt-button rt-button-hallow rt-button-inverse">預設按鈕樣式inverse</button><br>
@@ -24,9 +31,9 @@
 
 
     <h2 class="rt-section-title">標籤</h2>
-    <span class="rt-label rt-label-important">已下架</span><span class="rt-label rt-label-secondary">庫存不足</span><span class="rt-label  rt-label-success">規格更新</span>
+    <span class="rt-label">免運</span><span class="rt-label rt-label-important">已下架</span><span class="rt-label rt-label-secondary">庫存不足</span><span class="rt-label  rt-label-success">規格更新</span>
   </div>
-  <div class="rt-section rt-section-alt">
+  <div class="rt-section">
     <h2 class="rt-section-title">Card</h2>
     <section class="rt-card">
       <div class="rt-card-title">

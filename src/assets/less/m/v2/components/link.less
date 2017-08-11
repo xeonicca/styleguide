@@ -1,0 +1,56 @@
+@import (reference) "../abstracts/variables.less";
+
+@link-border-radius: @component-border-radius;
+@link-default-background-color: @component-background-color;
+@link-text-dark-color: @default-font-dark-color;
+@link-text-light-color: @default-font-light-color;
+
+@link-primary-color: @primary-color;
+@link-important-color: @important-color;
+@link-success-color: @success-color;
+@link-secondary-color: @secondary-color;
+@link-info-color: @info-color;
+@link-inverse-color: @inverse-color;
+
+@link-colors: link-primary-color, link-secondary-color, link-important-color, link-success-color, link-info-color, link-inverse-color;
+@link-font-size: @component-text-fontsize;
+
+.rt-link {
+  display: inline-block;
+  padding: 8px 20px;
+  background-color: @link-default-background-color;
+  font-size: @link-font-size;
+  line-height: 1;
+  vertical-align: middle;
+  border: 0;
+  outline: 0;
+}
+
+.ui-link-generator-mixin(@list) {
+  @size: length(@list);
+
+  .ui-link(@variable) {
+    @color-variable: @@variable;
+    @modifier: replace(@variable, '^link-|-color$', '', 'g');
+
+    .rt-link-@{modifier} {
+      color: darken(@color-variable, 0%);
+    }
+  }
+
+  ._(@counter) when (@counter <= @size) {
+    @color-variable: extract(@list, @counter);
+    .ui-link(@color-variable);
+    ._(@counter+1);
+  }
+
+  ._(1);
+}
+
+.rt-link-block {
+  width: 100%;
+  padding: 10px;
+}
+
+// Generate link of various purposes
+.ui-link-generator-mixin(@link-colors);
