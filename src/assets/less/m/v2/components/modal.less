@@ -2,16 +2,16 @@
 
 @modal-wrap-background: fade(@ruten-theme-comliment-color, 50%);
 @modal-container-background: @component-background-color;
-
+@modal-close-color: @default-font-compliment-color;
 @modal-wrap-zindex: 1;
 @modal-container-zindex: 2;
-
+@modal-container-border-radius: @component-border-radius;
 @modal-container-width: 300px;
 
 @modal-title-spacing: @base-spacing;
 @modal-body-spacing: @large-spacing;
 @modal-body-fontsize: @regular-fontsize;
-
+@modal-close-fontsize: @large-fontsize;
 
 .rt-modal {
   display: none;
@@ -41,8 +41,8 @@
   }
 }
 
-
 .rt-modal-container {
+  position: relative;
   box-sizing: border-box;
   margin-bottom: 40%;
   padding: 30px 25px 20px;
@@ -50,7 +50,16 @@
   max-height: 80%;
   z-index: @modal-container-zindex;
   background-color: @modal-container-background;
+  border-radius: @modal-container-border-radius;
   box-shadow: 0 12px 24px 0 rgba(0, 0, 0, 0.2);
+}
+
+.rt-modal-close {
+  position: absolute;
+  right: 12px;
+  top: 5px;
+  font-size: @modal-close-fontsize;
+  color: @modal-close-color;
 }
 
 .rt-modal-header {

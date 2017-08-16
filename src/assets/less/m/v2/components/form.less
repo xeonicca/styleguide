@@ -49,7 +49,6 @@
   flex: 0 0 100%;
   height: @form-input-height;
   padding: 6px 10px; // The 6px vertically centers text on FF, ignored by Webkit
-  background-color: #fff;
   border: 1px solid @form-border-color;
   border-radius: @form-border-radius;
   font-size: @form-input-fontsize;
@@ -57,6 +56,7 @@
   box-shadow: none;
   box-sizing: border-box;
   background-color: @form-input-background;
+  outline: 0;
 
   &:focus {
     border-color: @form-active-border-color;
@@ -163,14 +163,76 @@
   color: @form-success-color;
 }
 
-fieldset {
-  padding: 0;
-  border-width: 0;
+.rt-form-options {
+  flex: 0 0 100%;
+  padding: 3px 4px;
+  height: @form-input-height;
+  border: 1px solid @form-border-color;
+  border-radius: @form-border-radius;
+  box-sizing: border-box;
 }
 
-input {
-  &[type="checkbox"],
-  &[type="radio"] {
-    display: inline;
+.rt-form-option {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  font-size: @form-input-fontsize;
+  color: @form-input-color;
+  box-shadow: none;
+  box-sizing: border-box;
+  background-color: @form-input-background;
+  text-align: center;
+  transition: all 100ms ease;
+
+  + .rt-form-option {
+    border-left: 0;
+  }
+
+  &:first-of-type {
+    border-top-left-radius: @form-border-radius;
+    border-bottom-left-radius: @form-border-radius;
+  }
+
+  &:last-of-type {
+    border-top-right-radius: @form-border-radius;
+    border-bottom-right-radius: @form-border-radius;
+  }
+}
+
+.rt-form-option-input {
+  display: none;
+
+  &:checked {
+     + .rt-form-option {
+      background-color: @form-active-border-color;
+      border-radius: @form-border-radius;
+      color: #fff;
+    }
+  }
+}
+
+
+.rt-form-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex: 0 0 100%;
+  height: @form-input-height;
+  padding: 6px 5px 6px 10px;
+  border: 1px solid @form-border-color;
+  border-radius: @form-border-radius;
+  font-size: @form-input-fontsize;
+  color: @form-input-color;
+  box-shadow: none;
+  box-sizing: border-box;
+  background-color: @form-input-background;
+  outline: 0;
+
+  &:after {
+    content: '';
+    width: 18px;
+    height: 18px;
+    .icon-background-generator(angle-right, @form-placeholder-color, 18px, 18px);
   }
 }
