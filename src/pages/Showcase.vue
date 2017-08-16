@@ -34,56 +34,49 @@
     <span class="rt-label">免運</span><span class="rt-label rt-label-important">已下架</span><span class="rt-label rt-label-secondary">庫存不足</span><span class="rt-label  rt-label-success">規格更新</span>
   </div>
   <div class="rt-section">
-    <h2 class="rt-section-title">Card</h2>
-    <section class="rt-card">
-      <div class="rt-card-title">
-        <h3>ac02的賣場</h3>
-        <a class="rt-card-subtitle" href="#">進入賣場</a>
-      </div>
-      <div class="rt-card-body">
-        <table>
-          <thead>
-            <tr>
-              <th></th>
-              <th>1週</th>
-              <th>1月</th>
-              <th>半年</th>
-              <th>全部</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td width="100">優良評價</td>
-              <td>50</td>
-              <td>244</td>
-              <td>1768</td>
-              <td>7824</td>
-            </tr>
-            <tr>
-              <td>普通評價</td>
-              <td>0</td>
-              <td>0</td>
-              <td>0</td>
-              <td>8</td>
-            </tr>
-            <tr>
-              <td>差勁評價</td>
-              <td>0</td>
-              <td>0</td>
-              <td>1</td>
-              <td>3</td>
-            </tr>
-            <tr>
-              <td>評價次數</td>
-              <td>50</td>
-              <td>244</td>
-              <td>1769</td>
-              <td>7835</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
+    <h2 class="rt-section-title">Table</h2>
+
+    <table>
+      <thead>
+        <tr>
+          <th></th>
+          <th>1週</th>
+          <th>1月</th>
+          <th>半年</th>
+          <th>全部</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td width="100">優良評價</td>
+          <td>50</td>
+          <td>244</td>
+          <td>1768</td>
+          <td>7824</td>
+        </tr>
+        <tr>
+          <td>普通評價</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>8</td>
+        </tr>
+        <tr>
+          <td>差勁評價</td>
+          <td>0</td>
+          <td>0</td>
+          <td>1</td>
+          <td>3</td>
+        </tr>
+        <tr>
+          <td>評價次數</td>
+          <td>50</td>
+          <td>244</td>
+          <td>1769</td>
+          <td>7835</td>
+        </tr>
+      </tbody>
+    </table>
   </div>
   <div class="rt-section">
     <h2 class="rt-section-title">表單</h2>
@@ -120,9 +113,14 @@
       </div>
 
       <div class="rt-form-group">
-        <label class="rt-form-label" for="officePhone">商品分類</label>
+        <label class="rt-form-label">商品分類</label>
         <a href="#" class="rt-form-toggle">請選擇</a>
       </div>
+
+      <!-- <div class="rt-form-group">
+        <label class="rt-form-label" for="officePhone">商品數量</label>
+        <a href="#" class="rt-form-toggle">請選擇</a>
+      </div> -->
 
       <div class="rt-form-group">
         <label class="rt-form-label" for="exampleRecipientInput">Reason for contacting</label>
