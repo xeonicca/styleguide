@@ -11,6 +11,14 @@
     <button class="rt-button rt-button-important">預設按鈕樣式important</button><br>
     <button class="rt-button rt-button-success">預設按鈕樣式success</button><br>
 
+    <h2 class="rt-section-subtitle">按鈕disabled</h2>
+    <input class="rt-button" type="button" disabled value="預設按鈕樣式"><br>
+    <input class="rt-button rt-button-primary" type="button" disabled value="預設按鈕樣式primary"><br>
+    <input class="rt-button rt-button-secondary" type="button" disabled value="預設按鈕樣式secondary"><br>
+    <input class="rt-button rt-button-inverse" type="button" disabled value="預設按鈕樣式inverse"><br>
+    <input class="rt-button rt-button-important" type="button" disabled value="預設按鈕樣式important"><br>
+    <input class="rt-button rt-button-success" type="button" disabled value="預設按鈕樣式success"><br>
+
     <!-- <button class="rt-link">預設按鈕樣式</button><br>
     <button class="rt-link rt-link-primary">預設按鈕樣式primary</button><br>
     <button class="rt-link rt-link-secondary">預設按鈕樣式secondary</button><br>
