@@ -3,6 +3,7 @@
 @button-background-color: @default-color;
 @button-text-dark-color: @default-font-dark-color;
 @button-text-light-color: @default-font-light-color;
+@button-text-alt-color: @default-font-compliment-color;
 @button-border-radus: @component-border-radius;
 @button-fontsize: @component-text-fontsize;
 
@@ -23,7 +24,7 @@
 
     .rt-button-@{modifier} {
       @backdrop-color: fade(darken(@color-variable, 60%), 15%);
-      background-image: linear-gradient(to bottom, spin(@color-variable, 10), darken(@color-variable, 3%));
+      background-image: linear-gradient(to bottom, spin(@color-variable, 7), darken(@color-variable, 3%));
       color: @button-text-light-color;
       box-shadow: inset 0px -1px @backdrop-color;
 
@@ -34,6 +35,7 @@
       &:disabled {
         background-image: none;
         background-color: fade(@color-variable, 80%);
+        color: @button-text-light-color;
       }
     }
 
@@ -75,6 +77,12 @@
   &:active {
     box-shadow: 1px 1px 2px rgba(0,0,0,0.3) inset;
     background-color: contrast(@button-background-color, darken(@button-background-color, 10%), lighten(@button-background-color, 10%), 20%);
+  }
+
+  &:disabled {
+    background-image: none;
+    background-color: fade(@button-background-color, 80%);
+    color: @button-text-alt-color;
   }
 }
 
