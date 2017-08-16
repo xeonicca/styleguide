@@ -2,10 +2,10 @@
 <main>
   <div class="rt-section rt-section-alt">
     <section class="rt-card">
-      <div class="rt-card-title">
-        <h2>ac02的賣場</h2>
+      <h2 class="rt-card-title">
+        <span>ac02的賣場</span>
         <a class="rt-card-subtitle" href="#"><span class="vmiddle">進入賣場</span>&nbsp;<i class="rti rti-arrow-right-subtitle"></i></a>
-      </div>
+      </h2>
       <div class="rt-card-subtitle">
         <p>優良交易評價：<strong class="rt-text-success">7824</strong></p>
       </div>

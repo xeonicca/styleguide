@@ -1,6 +1,7 @@
 <template>
   <div class="rt-modal">
     <div class="rt-modal-container">
+      <a href="#" class="rt-modal-close" @click="closeModal">&times;</a>
       <div class="rt-modal-header">
         <h4>註冊成功</h4>
       </div>

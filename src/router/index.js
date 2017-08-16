@@ -5,6 +5,7 @@ import Multipane from '@/pages/Multipane'
 import Register from '@/pages/Register'
 import Login from '@/pages/Login'
 import Credit from '@/pages/Credit'
+import Status from '@/pages/Status'
 
 Vue.use(Router)
 
@@ -34,6 +35,11 @@ export default new Router({
       path: '/credit',
       name: 'Credit',
       component: Credit
+    },
+    {
+      path: '/status',
+      name: 'Status',
+      component: Status
     }
   ]
 })

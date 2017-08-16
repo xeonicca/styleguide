@@ -27,6 +27,10 @@
       // color: contrast(@color-variable, @button-text-dark-color, @button-text-light-color, 50%);
       color: @button-text-light-color;
       box-shadow: inset 0px -1px @backdrop-color;
+
+      &:disabled {
+        background-color: fade(@color-variable, 10%);
+      }
     }
 
     .rt-button-hallow.rt-button-@{modifier} {
