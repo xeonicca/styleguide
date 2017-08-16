@@ -182,6 +182,7 @@
   box-sizing: border-box;
   background-color: @form-input-background;
   text-align: center;
+  transition: all 100ms ease;
 
   + .rt-form-option {
     border-left: 0;
@@ -207,5 +208,30 @@
       border-radius: @form-border-radius;
       color: #fff;
     }
+  }
+}
+
+
+.rt-form-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex: 0 0 100%;
+  height: @form-input-height;
+  padding: 6px 5px 6px 10px;
+  border: 1px solid @form-border-color;
+  border-radius: @form-border-radius;
+  font-size: @form-input-fontsize;
+  color: @form-input-color;
+  box-shadow: none;
+  box-sizing: border-box;
+  background-color: @form-input-background;
+  outline: 0;
+
+  &:after {
+    content: '';
+    width: 18px;
+    height: 18px;
+    .icon-background-generator(angle-right, @form-placeholder-color, 18px, 18px);
   }
 }

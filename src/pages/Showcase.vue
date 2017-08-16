@@ -116,9 +116,14 @@
 
           <input id="radio3" name="goodsStatus" class="rt-form-option-input" type="radio">
           <label class="rt-form-option rt-column-4" for="radio3">物品中描述</label>
-
         </div>
       </div>
+
+      <div class="rt-form-group">
+        <label class="rt-form-label" for="officePhone">商品分類</label>
+        <a href="#" class="rt-form-toggle">請選擇</a>
+      </div>
+
       <div class="rt-form-group">
         <label class="rt-form-label" for="exampleRecipientInput">Reason for contacting</label>
         <select class="rt-form-input" id="exampleRecipientInput">
