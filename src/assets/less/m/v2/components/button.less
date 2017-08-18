@@ -24,7 +24,7 @@
 
     .rt-button-@{modifier} {
       @backdrop-color: fade(darken(@color-variable, 60%), 15%);
-      background-image: linear-gradient(to bottom, spin(@color-variable, 7), darken(@color-variable, 3%));
+      background-image: linear-gradient(to bottom, lighten(@color-variable, 7%), darken(@color-variable, 3%));
       color: @button-text-light-color;
       box-shadow: inset 0px -1px @backdrop-color;
 
@@ -33,7 +33,6 @@
       }
 
       &:disabled {
-        background-image: none;
         background-color: fade(@color-variable, 80%);
         color: @button-text-light-color;
       }
@@ -73,6 +72,7 @@
   color: contrast(@button-background-color, @button-text-dark-color, @button-text-light-color, 70%);
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   -webkit-appearance: none;
+  user-select: none;
 
   &:active {
     box-shadow: 1px 1px 2px rgba(0,0,0,0.3) inset;
@@ -80,7 +80,17 @@
   }
 
   &:disabled {
-    background-image: none;
+    @back-color: fade(#ccc, 20%);
+    @fore-color: fade(#8c9096, 40%);
+    // background-image: repeating-linear-gradient(-45deg, #ffd42a, #ffd42a 20px, #3e454c 20px, #3e454c 40px, #ffd42a 40px);
+    background-image: repeating-linear-gradient(
+      -45deg,
+      @back-color,
+      @back-color 2px,
+      @fore-color 2px,
+      @fore-color 5px,
+      @back-color 5px
+    );
     background-color: fade(@button-background-color, 80%);
     color: @button-text-alt-color;
   }

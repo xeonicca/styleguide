@@ -109,7 +109,7 @@
       <div class="rt-form-group">
         <label class="rt-form-label" for="officePhone">商品狀態*</label>
         <div class="rt-form-options rt-columns">
-          <input id="radio1" name="goodsStatus" class="rt-form-option-input" type="radio" checked>
+          <input id="radio1" name="goodsStatus" class="rt-form-option-input" type="radio">
           <label class="rt-form-option rt-column-4" for="radio1">全新</label>
 
           <input id="radio2" name="goodsStatus" class="rt-form-option-input" type="radio">
