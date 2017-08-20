@@ -29,4 +29,11 @@
 
 .rt-columns {
   display: flex;
+  flex-wrap: wrap;
+}
+
+.rt-columns-gapless {
+  > .rt-column {
+    padding: 0;
+  }
 }

@@ -6,6 +6,7 @@ import Register from '@/pages/Register'
 import Login from '@/pages/Login'
 import Credit from '@/pages/Credit'
 import Status from '@/pages/Status'
+import Products from '@/pages/Products'
 
 Vue.use(Router)
 
@@ -40,6 +41,11 @@ export default new Router({
       path: '/status',
       name: 'Status',
       component: Status
+    },
+    {
+      path: '/products',
+      name: 'Products',
+      component: Products
     }
   ]
 })
