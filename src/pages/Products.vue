@@ -3,40 +3,41 @@
     <div class="rt-column rt-column-6" v-for="product in productList">
       <div class="rt-product">
         <figure class="rt-product-image">
-          <img src="http://via.placeholder.com/100/cdd3d8" alt="">
+          <img src="http://via.placeholder.com/80/cdd3d8" alt="">
         </figure>
-        <p class="rt-prduct-price"><strong class="rt-text-price rt-text-price-1">{{ product.price }}</strong></p>
         <figcaption class="rt-product-name">{{ product.name }}</figcaption>
+        <p class="rt-prduct-price"><span class="rt-text-price rt-text-price-1">{{ product.price }}</span></p>
+
       </div>
     </div>
 
     <div class="rt-column rt-column-6" v-for="product in productList">
       <div class="rt-product">
         <figure class="rt-product-image">
-          <img src="http://via.placeholder.com/100/cdd3d8" alt="">
+          <img src="http://via.placeholder.com/80/cdd3d8" alt="">
         </figure>
-        <p class="rt-prduct-price"><strong class="rt-text-price rt-text-price-2">{{ product.price }}</strong></p>
         <figcaption class="rt-product-name">{{ product.name }}</figcaption>
+        <p class="rt-prduct-price"><span class="rt-text-price rt-text-price-2">{{ product.price }}</span></p>
       </div>
     </div>
 
     <div class="rt-column rt-column-6" v-for="product in productList">
       <div class="rt-product">
         <figure class="rt-product-image">
-          <img src="http://via.placeholder.com/100/cdd3d8" alt="">
+          <img src="http://via.placeholder.com/80/cdd3d8" alt="">
         </figure>
-        <p class="rt-prduct-price"><strong class="rt-text-price rt-text-price-3">{{ product.price }}</strong></p>
         <figcaption class="rt-product-name">{{ product.name }}</figcaption>
+        <p class="rt-prduct-price"><span class="rt-text-price rt-text-price-3">{{ product.price }}</span></p>
       </div>
     </div>
 
     <div class="rt-column rt-column-6" v-for="product in productList">
       <div class="rt-product">
         <figure class="rt-product-image">
-          <img src="http://via.placeholder.com/100/cdd3d8" alt="">
+          <img src="http://via.placeholder.com/80/cdd3d8" alt="">
         </figure>
-        <p class="rt-prduct-price"><strong class="rt-text-price rt-text-price-4">{{ product.price }}</strong></p>
         <figcaption class="rt-product-name">{{ product.name }}</figcaption>
+        <p class="rt-prduct-price"><span class="rt-text-price rt-text-price-4">{{ product.price }}</span></p>
       </div>
     </div>
   </div>
@@ -63,6 +64,7 @@ export default {
 </script>
 
 <style lang="less">
+@import (reference) "../assets/less/m/v2/abstracts/variables.less";
 .rt-column {
   &:nth-child(even) {
     .rt-product {
@@ -72,8 +74,8 @@ export default {
 }
 .rt-product {
   padding: 15px 15px 10px;
-  border-top: 1px solid #cdd3d8;
-  border-right: 1px solid #cdd3d8;
+  border-top: 1px solid @default-border-bottom-color;
+  border-right: 1px solid @default-border-bottom-color;
 }
 .rt-product-image {
   margin: 0;
@@ -82,15 +84,50 @@ export default {
 .rt-product-name {
   display: -webkit-box;
   -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical; 
+  -webkit-box-orient: vertical;
   font-size: 15px;
   line-height: 1.3;
+  margin: 10px 0 5px;
   letter-spacing: -0.2px;
   // -webkit-line-clamp: 2;
   overflow: hidden;
 }
 .rt-prduct-price {
-  padding: 10px 0;
+  // padding: 10px 0;
   text-align: center;
+}
+
+.rt-text-price {
+  color: @primary-color;
+  font-size: 18px;
+  // letter-spacing: -0.2px;
+
+  &:before {
+    content: '\0024';
+    padding-right: 3px;
+    // font-size: 0.6em;
+  }
+}
+
+.rt-text-price-1 {
+  // color: @primary-color;
+  font-family: 'Helvetica Neue', Roboto;
+}
+
+.rt-text-price-2 {
+  // color: @important-color;
+  font-family: 'Futura', 'Noto Sans';
+}
+
+.rt-text-price-3 {
+  // color: @secondary-color;
+  font-family: 'Avenir Next Condensed', 'Roboto Condensed Regular';
+  font-weight: 600;
+}
+
+.rt-text-price-4 {
+  // color: @success-color;
+  font-family: 'Avenir', arial;
+  font-weight: 500;
 }
 </style>
