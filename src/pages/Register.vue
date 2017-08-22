@@ -3,11 +3,21 @@
   <h2 class="rt-section-title">註冊一般會員</h2>
   <hr>
   <div class="rt-form">
-    <div class="rt-form-group">
-      <label class="rt-form-label" for="username">帳號*</label>
-      <input class="rt-form-input" type="text" id="username">
-      <p class="rt-form-text">4 ~ 24 字元</p>
+    <div class="rt-columns">
+      <div class="rt-column rt-column-8">
+        <div class="rt-form-group">
+          <label class="rt-form-label" for="username">帳號*</label>
+          <div class="rt-form-text rt-form-text-error">手機格式不正確!</div>
+          <input class="rt-form-input" type="text" id="username">
+          <p class="rt-form-text">4 ~ 24 字元</p>
+        </div>
+      </div>
+      <div class="rt-column rt-column-4">
+        <label class="rt-form-label rt-invisible">帳號*</label>
+        <button class="rt-button rt-button-block rt-button-primary">檢查重複</button>
+      </div>
     </div>
+
     <div class="rt-form-group">
       <label class="rt-form-label" for="password">密碼*</label>
       <input class="rt-form-input" type="password" id="password">
@@ -33,6 +43,7 @@
     </div>
     <div class="rt-form-group">
       <label class="rt-form-label" for="tosAgree">
+        <div for="tosAgree" generated="true" class="error rt-form-text rt-form-text-error" style="display: inline-block;">請同意條款</div>
         <input class="rt-form-input" type="checkbox" id="tosAgree">
         <p class="rt-form-text">同意<a href="#">PChomePay 支付連服務約定條款</a> 並以露天會員資料註冊 PChomePay 支付連</p>
       </label>

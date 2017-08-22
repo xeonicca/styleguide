@@ -39,10 +39,6 @@
   align-items: center;
   justify-content: space-between;
   margin-bottom: @form-component-gutter;
-
-  &:last-child {
-    margin-bottom: 0;
-  }
 }
 
 .rt-form-input {
@@ -97,7 +93,8 @@
 
 .rt-form-label {
   display: block;
-  margin-bottom: 6px;
+  position: relative;
+  margin-bottom: 7px;
   padding-left: 2px;
   letter-spacing: -0.6px;
   font-size: @form-label-fontsize;
@@ -145,6 +142,19 @@
     bottom: -11px;
     border: 6px solid transparent;
     border-top-color: @form-error-color;
+  }
+
+  .rt-form-label & {
+    position: absolute;
+    top: -20px;
+    left: -5px;
+    right: auto;
+    bottom: auto;
+
+    &:before {
+      right: auto;
+      left: 30px;
+    }
   }
 }
 

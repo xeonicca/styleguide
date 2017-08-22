@@ -1,12 +1,12 @@
 <template>
   <div class="rt-modal">
     <div class="rt-modal-container">
-      <a href="#" class="rt-modal-close" @click="closeModal">&times;</a>
       <div class="rt-modal-header">
         <h4>註冊成功</h4>
+        <a href="#" class="rt-modal-close" @click="closeModal">&times;</a>
       </div>
       <div class="rt-modal-body">
-        <p>人永遠不要忘記自己第一天的夢想，短暫的激情是不值錢的，別人可以拷貝我的模式，也要注重過程</p>
+        <p>聰明的人用腦袋講話，你應該做的不是去挑戰它，加油吧！</p>
       </div>
       <div class="rt-modal-footer">
         <div class="rt-columns">

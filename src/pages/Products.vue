@@ -1,45 +1,59 @@
 <template>
-  <div class="rt-columns rt-columns-gapless">
-    <div class="rt-column rt-column-6" v-for="product in productList">
-      <div class="rt-product">
-        <figure class="rt-product-image">
-          <img src="http://via.placeholder.com/80/cdd3d8" alt="">
-        </figure>
+  <div>
+    <article class="rt-product" v-for="product in productList">
+      <figure class="rt-product-image">
+        <img src="http://via.placeholder.com/240/cdd3d8" alt="">
+        <aside class="rt-product-tag">85折</aside>
+      </figure>
+      <div class="rt-product-body">
         <figcaption class="rt-product-name">{{ product.name }}</figcaption>
-        <p class="rt-prduct-price"><span class="rt-text-price rt-text-price-1">{{ product.price }}</span></p>
-
+        <figcaption class="rt-product-desc"><strong class="rt-text-discount">1500</strong>&nbsp;&nbsp;<strong class="rt-text-price">{{ product.price }}</strong></figcaption>
+        <div class="rt-product-desc"><span class="rt-label rt-label-success">全站活動</span><span class="rt-label rt-label-important">運費活動</span><span class="rt-label rt-label-secondary">折扣碼</span></div>
       </div>
-    </div>
 
-    <div class="rt-column rt-column-6" v-for="product in productList">
-      <div class="rt-product">
-        <figure class="rt-product-image">
-          <img src="http://via.placeholder.com/80/cdd3d8" alt="">
-        </figure>
-        <figcaption class="rt-product-name">{{ product.name }}</figcaption>
-        <p class="rt-prduct-price"><span class="rt-text-price rt-text-price-2">{{ product.price }}</span></p>
-      </div>
-    </div>
+    </article>
+<!--     <div class="rt-columns rt-columns-gapless">
+      <div class="rt-column rt-column-6" v-for="product in productList">
+        <div class="rt-product">
+          <figure class="rt-product-image">
+            <img src="http://via.placeholder.com/80/cdd3d8" alt="">
+          </figure>
+          <figcaption class="rt-product-name">{{ product.name }}</figcaption>
+          <p class="rt-prduct-price"><span class="rt-text-price rt-text-price-1">{{ product.price }}</span></p>
 
-    <div class="rt-column rt-column-6" v-for="product in productList">
-      <div class="rt-product">
-        <figure class="rt-product-image">
-          <img src="http://via.placeholder.com/80/cdd3d8" alt="">
-        </figure>
-        <figcaption class="rt-product-name">{{ product.name }}</figcaption>
-        <p class="rt-prduct-price"><span class="rt-text-price rt-text-price-3">{{ product.price }}</span></p>
+        </div>
       </div>
-    </div>
 
-    <div class="rt-column rt-column-6" v-for="product in productList">
-      <div class="rt-product">
-        <figure class="rt-product-image">
-          <img src="http://via.placeholder.com/80/cdd3d8" alt="">
-        </figure>
-        <figcaption class="rt-product-name">{{ product.name }}</figcaption>
-        <p class="rt-prduct-price"><span class="rt-text-price rt-text-price-4">{{ product.price }}</span></p>
+      <div class="rt-column rt-column-6" v-for="product in productList">
+        <div class="rt-product">
+          <figure class="rt-product-image">
+            <img src="http://via.placeholder.com/80/cdd3d8" alt="">
+          </figure>
+          <figcaption class="rt-product-name">{{ product.name }}</figcaption>
+          <p class="rt-prduct-price"><span class="rt-text-price rt-text-price-2">{{ product.price }}</span></p>
+        </div>
       </div>
-    </div>
+
+      <div class="rt-column rt-column-6" v-for="product in productList">
+        <div class="rt-product">
+          <figure class="rt-product-image">
+            <img src="http://via.placeholder.com/80/cdd3d8" alt="">
+          </figure>
+          <figcaption class="rt-product-name">{{ product.name }}</figcaption>
+          <p class="rt-prduct-price"><span class="rt-text-price rt-text-price-3">{{ product.price }}</span></p>
+        </div>
+      </div>
+
+      <div class="rt-column rt-column-6" v-for="product in productList">
+        <div class="rt-product">
+          <figure class="rt-product-image">
+            <img src="http://via.placeholder.com/80/cdd3d8" alt="">
+          </figure>
+          <figcaption class="rt-product-name">{{ product.name }}</figcaption>
+          <p class="rt-prduct-price"><span class="rt-text-price rt-text-price-4">{{ product.price }}</span></p>
+        </div>
+      </div>
+    </div> -->
   </div>
 </template>
 
@@ -72,62 +86,28 @@ export default {
     }
   }
 }
-.rt-product {
-  padding: 15px 15px 10px;
-  border-top: 1px solid @default-border-bottom-color;
-  border-right: 1px solid @default-border-bottom-color;
-}
-.rt-product-image {
-  margin: 0;
-  text-align: center;
-}
-.rt-product-name {
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  font-size: 15px;
-  line-height: 1.3;
-  margin: 10px 0 5px;
-  letter-spacing: -0.2px;
-  // -webkit-line-clamp: 2;
-  overflow: hidden;
-}
+// .rt-product {
+//   padding: 15px 15px 10px;
+//   border-top: 1px solid @default-border-bottom-color;
+//   border-right: 1px solid @default-border-bottom-color;
+// }
+// .rt-product-image {
+//   margin: 0;
+//   text-align: center;
+// }
+// .rt-product-name {
+//   display: -webkit-box;
+//   -webkit-line-clamp: 2;
+//   -webkit-box-orient: vertical;
+//   font-size: 15px;
+//   line-height: 1.3;
+//   margin: 10px 0 5px;
+//   letter-spacing: -0.2px;
+//   // -webkit-line-clamp: 2;
+//   overflow: hidden;
+// }
 .rt-prduct-price {
   // padding: 10px 0;
   text-align: center;
-}
-
-.rt-text-price {
-  color: @primary-color;
-  font-size: 18px;
-  // letter-spacing: -0.2px;
-
-  &:before {
-    content: '\0024';
-    padding-right: 3px;
-    // font-size: 0.6em;
-  }
-}
-
-.rt-text-price-1 {
-  // color: @primary-color;
-  font-family: 'Helvetica Neue', Roboto;
-}
-
-.rt-text-price-2 {
-  // color: @important-color;
-  font-family: 'Futura', 'Noto Sans';
-}
-
-.rt-text-price-3 {
-  // color: @secondary-color;
-  font-family: 'Avenir Next Condensed', 'Roboto Condensed Regular';
-  font-weight: 600;
-}
-
-.rt-text-price-4 {
-  // color: @success-color;
-  font-family: 'Avenir', arial;
-  font-weight: 500;
 }
 </style>

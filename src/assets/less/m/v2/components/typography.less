@@ -31,41 +31,32 @@
 
 .ui-text-generator-mixin(@text-colors);
 
-
-.rt-text-price {
-  vertical-align: middle;
+.rt-text-discount {
+  vertical-align: bottom;
   line-height: 1;
-  font-size: 18px;
+  font-size: @regular-fontsize;
   letter-spacing: 0.1px;
-
+  font-family: 'Helvetica Neue', Roboto;
+  text-decoration: line-through;
+  color: @default-font-compliment-color;
   &:before {
     display: inline-block;
     content: '\0024';
     padding-right: 2px;
   }
 }
+.rt-text-price {
+  vertical-align: bottom;
+  line-height: 1;
+  font-size: @medium-fontsize;
+  letter-spacing: 0.1px;
+  font-family: 'Helvetica Neue', Roboto;
+  // font-weight: 700;
+  color: saturate(darken(@primary-color, 5%), 20%);
 
-
-// for demo
-.rt-text-price-1 {
-  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-  color: @primary-color;
-}
-
-
-.rt-text-price-2 {
-  font-family: 'Futura';
-  color: @important-color;
-}
-
-
-.rt-text-price-3 {
-  font-family: 'Avenir Next Condensed';
-  color: @secondary-color;
-}
-
-
-.rt-text-price-4 {
-  font-family: 'Avenir';
-  color: @success-color;
+  &:before {
+    display: inline-block;
+    content: '\0024';
+    padding-right: 2px;
+  }
 }
