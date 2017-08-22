@@ -9,8 +9,9 @@
         <li><router-link to="register">Register</router-link></li>
         <!-- <li><router-link to="login">Login</router-link></li> -->
         <li><router-link to="credit">Credit</router-link></li>
-        <li><router-link to="status">Status</router-link></li>
+        <!-- <li><router-link to="status">Status</router-link></li> -->
         <li><router-link to="products">Products</router-link></li>
+        <li><router-link to="account">Account</router-link></li>
       </ul>
     </nav>
     <router-view></router-view>

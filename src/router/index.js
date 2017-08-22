@@ -7,6 +7,7 @@ import Login from '@/pages/Login'
 import Credit from '@/pages/Credit'
 import Status from '@/pages/Status'
 import Products from '@/pages/Products'
+import Account from '@/pages/Account'
 
 Vue.use(Router)
 
@@ -46,6 +47,11 @@ export default new Router({
       path: '/products',
       name: 'Products',
       component: Products
+    },
+    {
+      path: '/account',
+      name: 'Account',
+      component: Account
     }
   ]
 })
