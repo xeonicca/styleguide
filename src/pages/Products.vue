@@ -7,7 +7,7 @@
       </figure>
       <div class="rt-product-body">
         <figcaption class="rt-product-name">{{ product.name }}</figcaption>
-        <figcaption class="rt-product-desc"><strong class="rt-text-discount">1500</strong>&nbsp;&nbsp;<strong class="rt-text-price">{{ product.price }}</strong></figcaption>
+        <figcaption class="rt-product-desc"><span class="rt-text-discount">1500</span>&nbsp;&nbsp;<span class="rt-text-price">{{ product.price }}</span></figcaption>
         <div class="rt-product-desc"><span class="rt-label rt-label-success">全站活動</span><span class="rt-label rt-label-important">運費活動</span><span class="rt-label rt-label-secondary">折扣碼</span></div>
       </div>
 
