@@ -1,0 +1,53 @@
+@import (reference) "../abstracts/variables.less";
+
+@img-media-space: @tiny-spacing;
+
+.media-item-image( @width, @height, @padding: 5px, @valign: middle) {
+  display: inline-block;
+  text-align: center;
+  width: @width;
+  height: @height;
+  line-height: @height;
+  padding: @padding;
+
+  img {
+    max-width: 100%;
+    max-height: 100%;
+    vertical-align: @valign;
+  }
+}
+
+.rt-media {
+  display: flex;
+  width: 100%;
+  position: relative;
+  align-items: flex-start;
+  -webkit-align-items: flex-start;
+
+  .rt-media-img {
+    margin-right: @img-media-space;
+  }
+
+  &.rt-media-reverse {
+    flex-direction: row-reverse;
+
+    .rt-media-img {
+      margin-right: 0px;
+      margin-left: @img-media-space;
+    }
+  }
+
+  &.rt-media-center {
+    align-items: center;
+    -webkit-align-items: center;
+  }
+
+  &.rt-media-bottom {
+    align-items: flex-end;
+    -webkit-align-items: flex-end;
+  }
+}
+
+.rt-media-body {
+  flex: 1 1 0;
+}
