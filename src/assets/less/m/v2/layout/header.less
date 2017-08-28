@@ -1,5 +1,6 @@
 @import (reference) "../abstracts/variables.less";
 @import (reference) "../abstracts/functions.less";
+@import "header-search.less";
 
 @header-height: 55px;
 @header-background-color: @ruten-theme-color;
@@ -111,24 +112,32 @@
   // background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.3) 15%, rgba(255, 255, 255, 0.2));
 }
 
-.header-search-input-wrap {
+.header-search-wrap {
   position: relative;
   flex: 1 1 60%;
   height: @header-search-component-height;
 }
 
-.header-search-input-mask {
+.header-search-mask {
   position: absolute;
   top: 50%;
   left: 0;
   right: 0;
   bottom: 0;
+  z-index: 3;
   margin-top: -1 * @header-search-component-height /2;
   margin-left: 10px;
   margin-right: 10px;
   height: @header-search-component-height;
   background-color: transparent;
   border-radius: @header-form-borde-radius;
+  transform-origin: 50% 50%;
+  transition: all 700ms ease, background-color 100ms ease, height 100ms ease;
+
+  .search-mode & {
+    background-color: #fff;
+    transform: scale(50);
+  }
 }
 
 .header-search-input {
@@ -164,7 +173,7 @@
 }
 
 .header-search-button {
-  flex: 1 0 60px;
+  flex: 0 0 60px;
   height: @header-search-component-height;
   background-color: @header-default-button-color;
   margin: 0;
@@ -176,7 +185,6 @@
 }
 
 .header-full-search-button {
-  flex-basis: 20px;
   border-radius: 0 @header-form-borde-radius @header-form-borde-radius 0;
   .icon-background-generator(search, @white-color, 16, 16);
 }
