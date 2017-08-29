@@ -83,7 +83,6 @@
 
     & + .rt-form-crlabel {
       line-height: @form-input-height;
-      vertical-align: middle;
       display: flex;
       align-items: center;
       &::before{
@@ -92,15 +91,8 @@
         margin-right: 8px;
         width: @form-input-icon-size;
         height: @form-input-height;
-        vertical-align: middle;
         background-position: center center;
         background-size: contain;
-      }
-    }
-    &.media + .rt-form-crlabel {
-      display: flex;
-      &::before {
-        flex: none;
       }
     }
   }
