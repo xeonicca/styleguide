@@ -141,10 +141,29 @@
       <div class="rt-form-group">
         <label class="rt-form-label" for="exampleMessage">給賣家的話</label>
         <textarea class="rt-form-input" placeholder="Hi Dave …" id="exampleMessage"></textarea>
-        <label class="rt-form-label">
-          <input class="rt-form-input" type="checkbox">
-          <span class="rt-form-text">儲存為預設範本</span>
+      </div>
+      <div class="rt-form-group">
+          <input class="rt-form-input" type="checkbox" id="save-default">
+          <label class="rt-form-crlabel" for="save-default"><div>儲存為預設範本</div></label>
+          <input class="rt-form-input" type="checkbox" id="pig" disabled="disabled">
+          <label class="rt-form-crlabel" for="pig"><div>你是豬嗎?</div></label>
+      </div>
+      <div class="rt-form-group">
+        <input class="rt-form-input" type="radio" id="SEVEN" name="delivery">
+        <label class="rt-form-crlabel" for="SEVEN">
+          <div>
+            <div>
+              123
+            </div>
+            <div>
+              456
+            </div>
+          </div>
         </label>
+      </div>
+      <div class="rt-form-group">
+        <input class="rt-form-input" type="radio" id="CVS" name="delivery">
+        <label class="rt-form-crlabel" for="CVS"><div>全家、OK、萊爾富取貨</div></label>
       </div>
       <div class="rt-form-group">
         <input class="rt-button rt-button-block rt-button-primary" type="submit" value="Submit">
