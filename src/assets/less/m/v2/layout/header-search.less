@@ -11,6 +11,9 @@
 @search-input-placeholder-color: @default-font-compliment-color;
 @search-input-height: 30px;
 
+@search-keyword-height: 30px;
+@search-keyword-background: @info-color;
+
 .search-mode {
   overflow: hidden;
 }
@@ -80,4 +83,28 @@
   appearance: none;
   .icon-background-generator(angle-down, @search-icon-color, 16, 16);
   background-position: 85% center;
+}
+
+
+.rt-search-keyword {
+  display: inline-block;
+  position: relative;
+  margin-bottom: 10px;
+  padding: 0 6px;
+  line-height: @search-keyword-height;
+
+  &:before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background-color: @search-keyword-background;
+  }
+
+  & + & {
+    margin-left: 10px;
+  }
 }

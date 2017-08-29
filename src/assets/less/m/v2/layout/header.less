@@ -26,6 +26,8 @@
 @logo-width: 65px;
 @logo-height: @logo-width / 2;
 
+@header-icon-height: 27px;
+
 @mobile-sprite-path: '/static/images/mobile_sprite.png';
 
 // the componenets included in this layout
@@ -72,7 +74,7 @@
   .icon-background-generator(cart, fade(#fff, 70%), @cart-width, @cart-width);
   position: relative;
   width: @cart-width * 2;
-  height: @cart-width;
+  height: @header-icon-height;
   background-position: center;
 }
 
@@ -81,7 +83,7 @@
   .icon-background-generator(chat, fade(#fff, 70%), @chat-width, @chat-width);
   position: relative;
   width: @chat-width * 2;
-  height: @chat-width;
+  height: @header-icon-height;
   background-position: center;
 }
 
@@ -99,7 +101,7 @@
 .rt-header-counter {
   position: absolute;
   top: -5px;
-  right: 5px;
+  right: 2px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -177,8 +179,8 @@
   bottom: 0;
   right: 10px;
   margin: auto;
-  color: @header-form-text-color;
-  font-size: @regular-fontsize;
+  color: @header-default-button-color;
+  font-size: @header-button-text-size;
   line-height: @header-search-component-height;
 }
 
