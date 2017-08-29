@@ -14,7 +14,7 @@
       </div>
       <div class="rt-column rt-column-4">
         <label class="rt-form-label rt-invisible">帳號*</label>
-        <button class="rt-button rt-button-block rt-button-primary">檢查重複</button>
+        <button class="rt-button rt-button-block">檢查重複</button>
       </div>
     </div>
 
