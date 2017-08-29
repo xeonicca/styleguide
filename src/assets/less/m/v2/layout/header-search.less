@@ -13,6 +13,8 @@
 
 @search-keyword-height: 30px;
 @search-keyword-background: @info-color;
+@search-keyword-fontsize: @regular-fontsize;
+@search-suggestion-fontsize: @small-fontsize;
 
 .search-mode {
   overflow: hidden;
@@ -107,4 +109,29 @@
   & + & {
     margin-left: 10px;
   }
+}
+
+
+.search-suggest-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.search-suggest-item {
+  padding: 16px 24px;
+  font-size: @search-suggestion-fontsize;
+  border-bottom: 1px solid @search-header-border-color;
+}
+
+.search-history-clear {
+  font-size: @search-keyword-fontsize;
+}
+
+.suggest-list-enter-active, .suggest-list-leave-active {
+  transition: all 1s;
+}
+.suggest-list-enter, .suggest-list-leave-to /* .list-leave-active below version 2.1.8 */ {
+  opacity: 0;
+  transform: translatex(100%);
 }

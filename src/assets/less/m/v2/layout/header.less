@@ -179,9 +179,10 @@
   bottom: 0;
   right: 10px;
   margin: auto;
-  color: @header-default-button-color;
-  font-size: @header-button-text-size;
-  line-height: @header-search-component-height;
+  width: 25px;
+  height: @header-search-component-height;
+  .icon-background-generator(times, @header-default-button-color, 12, 12);
+  background-position: center;
 }
 
 .header-search-button {
