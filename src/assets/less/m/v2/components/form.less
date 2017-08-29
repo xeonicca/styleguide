@@ -1,4 +1,5 @@
 @import (reference) "../abstracts/variables.less";
+@import (reference) "../../../common-mixin.less";
 
 @form-border-color: @component-border-color;
 @form-active-border-color: @primary-color;
@@ -23,6 +24,10 @@
 @form-text-fontsize: @small-fontsize;
 @form-tip-fontsize: @small-fontsize;
 @form-text-color: @default-font-compliment-color;
+@form-input-selected-color: @primary-color;
+
+@form-input-icon-color: @component-border-color;
+@form-input-icon-size: 20px;
 
 .rt-form {
   margin-bottom: @form-gutter;
@@ -74,11 +79,51 @@
   }
 
   &[type=checkbox], &[type=radio] {
-    vertical-align: middle;
+    display: none;
+
+    & + .rt-form-crlabel {
+      line-height: @form-input-height;
+      display: flex;
+      align-items: center;
+      &::before{
+        content: '';
+        flex: none;
+        margin-right: 8px;
+        width: @form-input-icon-size;
+        height: @form-input-height;
+        background-position: center center;
+        background-size: contain;
+      }
+    }
   }
 
   &:disabled {
     background-color: lighten(@form-border-color, 12%);
+  }
+}
+
+.rt-form-input[type="radio"] {
+  & + .rt-form-crlabel::before {
+    .icon-background-generator(circle-o, @form-input-icon-color, @form-input-icon-size, @form-input-icon-size);
+  }
+  &:checked + .rt-form-crlabel::before {
+    .icon-background-generator(dot-circle-o, @form-input-selected-color, @form-input-icon-size, @form-input-icon-size);
+  }
+  &[disabled] + .rt-form-crlabel::before {
+    .icon-background-generator(circle, @form-input-icon-color, @form-input-icon-size, @form-input-icon-size);
+  }
+}
+
+.rt-form-input[type="checkbox"] {
+  & + .rt-form-crlabel::before {
+    .icon-background-generator(square-o, @form-input-icon-color, @form-input-icon-size, @form-input-icon-size);
+  }
+  &:checked + .rt-form-crlabel::before {
+    background-position: 1px center;
+    .icon-background-generator(check-square-o, @form-input-selected-color, @form-input-icon-size, @form-input-icon-size);
+  }
+  &[disabled] + .rt-form-crlabel::before {
+    .icon-background-generator(square, @form-input-icon-color, @form-input-icon-size, @form-input-icon-size);
   }
 }
 
