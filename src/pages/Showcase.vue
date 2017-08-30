@@ -143,10 +143,10 @@
         <textarea class="rt-form-input" placeholder="Hi Dave …" id="exampleMessage"></textarea>
       </div>
       <div class="rt-form-group">
-          <input class="rt-form-input" type="checkbox" id="save-default">
-          <label class="rt-form-crlabel" for="save-default"><div>儲存為預設範本</div></label>
-          <input class="rt-form-input" type="checkbox" id="pig" disabled="disabled">
-          <label class="rt-form-crlabel" for="pig"><div>你是豬嗎?</div></label>
+        <input class="rt-form-input" type="checkbox" id="save-default">
+        <label class="rt-form-crlabel" for="save-default"><div>儲存為預設範本</div></label>
+        <input class="rt-form-input" type="checkbox" id="pig" disabled="disabled">
+        <label class="rt-form-crlabel" for="pig"><div>你是豬嗎?</div></label>
       </div>
       <div class="rt-form-group">
         <input class="rt-form-input" type="radio" id="SEVEN" name="delivery">
