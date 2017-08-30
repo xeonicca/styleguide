@@ -4,7 +4,8 @@
 
 @search-header-height: 55px;
 
-@search-header-border-color: @component-border-color;
+@search-header-background: @component-border-color;
+@search-header-border-color: @default-border-bottom-color;
 @search-border-radius: @component-border-radius;
 
 @search-icon-color: @default-icon-color;
@@ -17,10 +18,17 @@
 @search-suggestion-fontsize: @small-fontsize;
 
 .search-mode {
+  height: 100%;
   overflow: hidden;
+
+  #app {
+    overflow: hidden;
+  }
 }
 
 .rt-search {
+  display: flex;
+  flex-direction: column;
   position: fixed;
   top: 0;
   left: 0;
@@ -52,9 +60,15 @@
 .rt-search-header {
   display: flex;
   align-items: center;
-  height: @search-header-height;
+  flex: 0 0 @search-header-height;
   padding: 0 @small-spacing;
-  background-color: @search-header-border-color;
+  background-color: @search-header-background;
+}
+
+.rt-search-body {
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 100%;
 }
 
 .rt-search-prev {
@@ -129,9 +143,24 @@
 }
 
 .suggest-list-enter-active, .suggest-list-leave-active {
-  transition: all 1s;
+  transition: all 200ms;
 }
 .suggest-list-enter, .suggest-list-leave-to /* .list-leave-active below version 2.1.8 */ {
   opacity: 0;
   transform: translatex(100%);
+}
+
+.rt-search-section {
+  padding: 10px 24px 20px;
+}
+
+.rt-search-section-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  font-size: @medium-fontsize;
+  line-height: 1.5;
+  letter-spacing: -1px;
+  margin-top: @small-spacing;
+  margin-bottom: @small-spacing;
 }

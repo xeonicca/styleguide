@@ -8,7 +8,7 @@
     <form id="srch" class="rt-header-form" action="" method="get" data-module="rtm-search">
       <input type="hidden" name="searchfrom" value="indexbar">
       <div class="header-search-wrap">
-        <input id="keyword" class="header-search-input" name="k" type="search" value="" size="1" ref="input" />
+        <input id="keyword" class="header-search-input" name="k" type="search" value="" size="1" ref="input" v-model="keyword" />
         <!-- <a href="#" class="header-search-clear rti-remove-defaultGrey" data-type="clear-key"><b>&times;</b></a> -->
       </div>
       <div ref="mask" class="header-search-mask" @click="expandMask"></div>
@@ -18,7 +18,7 @@
     <a class="rt-header-cart" href="#"><span class="rt-header-counter">99</span></a>
     <a class="rt-header-chat" href="#"></a>
   </div>
-  <rt-search></rt-search>
+  <rt-search :searchKeyword.sync="keyword"></rt-search>
 </div>
 
 </template>
@@ -30,6 +30,12 @@ export default {
   components: {
     'rt-search': headerSearch
   },
+  data() {
+    return {
+      keyword: ''
+    }
+  },
+
   methods: {
     expandMask() {
       // if(!this.$el.classList.contains('rt-header-searchmode')) {

@@ -21,19 +21,19 @@
       <transition-group name="suggest-list" tag="ul" class="search-suggest-list">
         <li class="search-suggest-item" v-for="suggestion in suggestions" :key="suggestion">{{suggestion}}</li>
       </transition-group>
-      <div class="rt-section">
-        <h4 class="rt-section-title">
+      <div class="rt-search-section">
+        <h4 class="rt-search-section-title">
           <span>歷史搜尋</span>
-          <a class="search-history-clear" href="#">清除</a>
+          <a class="search-history-clear" href="#">清除搜尋</a>
         </h4>
-        <div class="rt-section-body">
+        <div class="rt-search-section-body">
           <span v-for="word in historyKeywords" class="rt-search-keyword" @click="applyKeyword(word)">{{word}}</span>
         </div>
       </div>
       <hr>
-      <div class="rt-section">
-        <h4 class="rt-section-title">熱門搜尋</h4>
-        <div class="rt-section-body">
+      <div class="rt-search-section">
+        <h4 class="rt-search-section-title">熱門搜尋</h4>
+        <div class="rt-search-section-body">
           <span v-for="word in hotKeywords" class="rt-search-keyword" @click="applyKeyword(word)">{{word}}</span>
         </div>
       </div>
@@ -62,6 +62,7 @@ export default {
   methods: {
     closeSearch() {
       document.body.classList.remove('search-mode')
+      this.$emit('update:keyword', this.keyword)
     },
 
     applyKeyword(word) {
@@ -107,11 +108,3 @@ export default {
   }
 }
 </script>
-
-<style>
-  .rt-section-title {
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
-  }
-</style>
