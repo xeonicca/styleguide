@@ -96,10 +96,15 @@
       }
 
       &.rt-form-crlabel-start {
-        align-items: flex-start;
+        &:before {
+          background-position: top center;
+        }
       }
       &.rt-form-crlabel-end {
         align-items: flex-end;
+        &:before {
+          background-position: bottom center;
+        }
       }
     }
   }
@@ -126,7 +131,6 @@
     .icon-background-generator(square-o, @form-input-icon-color, @form-input-icon-size, @form-input-icon-size);
   }
   &:checked + .rt-form-crlabel::before {
-    background-position: 1px center;
     .icon-background-generator(check-square-o, @form-input-selected-color, @form-input-icon-size, @form-input-icon-size);
   }
   &[disabled] + .rt-form-crlabel::before {
@@ -141,6 +145,7 @@
   color: @form-text-color;
   vertical-align: middle;
   letter-spacing: 0;
+  line-height: 1.4;
 }
 
 .rt-form-label {
@@ -180,7 +185,7 @@
   right: 0;
   bottom: 5px;
   margin: 0;
-  padding: 5px 7px;
+  padding: 2px 7px;
   background-color: @form-error-color;
   border-radius: @form-border-radius;
   font-size: @form-tip-fontsize;
@@ -198,7 +203,7 @@
 
   .rt-form-label & {
     position: absolute;
-    top: -20px;
+    top: -24px;
     left: -5px;
     right: auto;
     bottom: auto;
