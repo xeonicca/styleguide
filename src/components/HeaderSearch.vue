@@ -27,14 +27,14 @@
           <a class="search-history-clear" href="#">清除搜尋</a>
         </h4>
         <div class="rt-search-section-body">
-          <span v-for="word in historyKeywords" class="rt-search-keyword" @click="applyKeyword(word)">{{word}}</span>
+          <a hef="#" v-for="word in historyKeywords" class="rt-search-keyword" @click="applyKeyword(word)">{{word}}</a>
         </div>
       </div>
       <hr>
       <div class="rt-search-section">
         <h4 class="rt-search-section-title">熱門搜尋</h4>
         <div class="rt-search-section-body">
-          <span v-for="word in hotKeywords" class="rt-search-keyword" @click="applyKeyword(word)">{{word}}</span>
+          <a hef="#" v-for="word in hotKeywords" class="rt-search-keyword" @click="applyKeyword(word)">{{word}}</a>
         </div>
       </div>
     </div>

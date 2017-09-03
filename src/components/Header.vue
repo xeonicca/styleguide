@@ -45,14 +45,22 @@ export default {
       if(!document.body.classList.contains('search-mode')) {
         document.body.classList.toggle('search-mode')
       }
+    },
+
+    setMaskPosition() {
+      var inputOffset = this.$refs['input'].getBoundingClientRect();
+
+      ['top', 'left', 'width', 'height'].forEach((pos, i) => {
+        this.$refs['mask'].style[pos] = inputOffset[pos]+'px'
+      })
     }
   },
 
   mounted() {
-    var inputOffset = this.$refs['input'].getBoundingClientRect();
+    this.setMaskPosition()
 
-    ['top', 'left', 'width', 'height'].forEach((pos, i) => {
-      this.$refs['mask'].style[pos] = inputOffset[pos]+'px'
+    window.addEventListener('resize', () => {
+      this.setMaskPosition()
     })
   }
 }
