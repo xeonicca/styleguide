@@ -62,7 +62,7 @@ export default {
   methods: {
     closeSearch() {
       document.body.classList.remove('search-mode')
-      this.$emit('update:keyword', this.keyword)
+      this.$emit('update:searchKeyword', this.keyword)
     },
 
     applyKeyword(word) {

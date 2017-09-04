@@ -27,21 +27,21 @@
       </table>
       <!-- <hr> -->
       <div class="rt-columns">
-        <div class="rt-column">
+        <div class="rt-column rt-column-4">
           <a class="account-action account-action-password" href="#">
             <span class="account-action-text">修改密碼</span>
           </a>
         </div>
-        <div class="rt-column">
+        <div class="rt-column rt-column-4">
           <a class="account-action account-action-mobile" href="#">
             <span class="account-action-text">修改手機號碼</span>
           </a>
         </div>
-        <div class="rt-column">
+<!--         <div class="rt-column">
           <a class="account-action account-action-email" href="#">
             <span class="account-action-text">修改電子信箱</span>
           </a>
-        </div>
+        </div> -->
       </div>
     </div>
   </main>

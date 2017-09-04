@@ -9,6 +9,7 @@
 @search-border-radius: @component-border-radius;
 
 @search-icon-color: @default-icon-color;
+@search-input-color: @default-font-dark-color;
 @search-input-placeholder-color: @default-font-compliment-color;
 @search-input-height: 30px;
 
@@ -36,7 +37,7 @@
   bottom: 0;
   z-index: 4;
   border-radius: @search-border-radius;
-  transition: all 500ms cubic-bezier(.64,-0.25,.44,1.22);
+  transition: all 500ms cubic-bezier(.68,-0.3,.45,1.28);
   background-color: #fff;
   transform: translate3d(-100%, 0 ,0);
 
@@ -68,7 +69,7 @@
 .rt-search-body {
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
-  padding-bottom: 100%;
+  padding-bottom: 60%;
 }
 
 .rt-search-prev {
@@ -96,9 +97,11 @@
   outline: 0;
   height: @search-input-height;
   font-size: 15px;
+  color: @search-input-color;
   appearance: none;
-  .icon-background-generator(angle-down, @search-icon-color, 16, 16);
+  .icon-background-generator(angle-down, @search-input-color, 16, 16);
   background-position: 85% center;
+  background-color: #fff;
 }
 
 
@@ -130,6 +133,7 @@
   margin: 0;
   padding: 0;
   list-style-type: none;
+  transition: all 200ms;
 }
 
 .search-suggest-item {
