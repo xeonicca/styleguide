@@ -84,27 +84,23 @@
     & + .rt-form-crlabel {
       display: flex;
       align-items: center;
-      width: 100%;
+
       &::before {
         content: '';
         flex: none;
         margin-right: 8px;
         width: @form-input-icon-size;
-        height: @form-input-height;
+        height: @form-input-icon-size;
         background-position: center center;
         background-size: contain;
       }
 
       &.rt-form-crlabel-start {
-        &:before {
-          background-position: top center;
-        }
+        align-items: flex-start;
       }
+
       &.rt-form-crlabel-end {
         align-items: flex-end;
-        &:before {
-          background-position: bottom center;
-        }
       }
     }
   }
