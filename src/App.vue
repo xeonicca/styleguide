@@ -15,21 +15,26 @@
       </ul>
     </nav>
     <router-view></router-view>
+
     <footer>
+
       <rt-footer></rt-footer>
     </footer>
+    <rt-navbar></rt-navbar>
   </div>
 </template>
 
 <script>
 import header from '@/components/Header'
 import footer from '@/components/Footer'
+import navbar from '@/components/Navbar'
 
 export default {
   name: 'app',
   components: {
     'rt-header': header,
     'rt-footer': footer,
+    'rt-navbar': navbar
   }
 }
 </script>
