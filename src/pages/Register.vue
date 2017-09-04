@@ -45,7 +45,7 @@
       <label class="rt-form-label" for="tosAgree">
         <div for="tosAgree" generated="true" class="error rt-form-text rt-form-text-error" style="display: inline-block;">請同意條款</div>
         <input class="rt-form-input" type="checkbox" id="tosAgree">
-        <label class="rt-form-crlabel" for="tosAgree"><p >同意<a href="#">PChomePay 支付連服務約定條款</a> 並以露天會員資料註冊 PChomePay 支付連</p></label>
+        <label class="rt-form-crlabel rt-form-crlabel-start" for="tosAgree"><p class="tos-text">同意<a href="#">PChomePay 支付連服務約定條款</a> 並以露天會員資料註冊 PChomePay 支付連</p></label>
       </label>
     </div>
     <div class="rt-form-group">
@@ -73,5 +73,7 @@ export default {
 </script>
 
 <style>
-
+.tos-text {
+  line-height: 1.4;
+}
 </style>
