@@ -1,0 +1,108 @@
+@import (reference) "../abstracts/variables.less";
+
+@navbar-padding: 10px 20px;
+@navbar-background: @default-border-top-color;
+@navbar-shadow: 0 0 20px 0px darken(@default-border-top-color, 20%);
+@navbar-text-color: lighten(@default-font-dark-color, 10%);
+
+@navbar-link-spacing: 10px;
+@navbar-link-width: 40px;
+@navbar-link-height: @navbar-link-width * 0.90;
+@navbar-icon-size: @navbar-link-width * 0.5;
+@navbar-icon-color: @navbar-text-color;
+
+
+.rt-navbar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  
+  z-index: 3;
+}
+
+.rt-navbar-links {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding: @navbar-padding;
+  background: @navbar-background;
+  color: @navbar-text-color;
+  box-shadow: @navbar-shadow;
+}
+
+.rt-navbar-link {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  text-align: center;
+  width: @navbar-link-width;
+  height: @navbar-link-height;
+  background-size: @navbar-link-height/2;
+  background-position: center 0;
+  color: @navbar-text-color;
+  font-size: @tiny-fontsize;
+  // font-weight: bold;
+  letter-spacing: -1px;
+}
+
+.rt-navbar-link-category {
+  .icon-background-generator(category, @navbar-icon-color, @navbar-icon-size, @navbar-icon-size);
+}
+.rt-navbar-link-order {
+  .icon-background-generator(bag, @navbar-icon-color, @navbar-icon-size, @navbar-icon-size);
+}
+.rt-navbar-link-info {
+  .icon-background-generator(bell, @navbar-icon-color, @navbar-icon-size, @navbar-icon-size);
+}
+.rt-navbar-link-account {
+  .icon-background-generator(user, @navbar-icon-color, @navbar-icon-size, @navbar-icon-size);
+}
+
+.rt-navbar-link-upload {
+  &:before {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    width: @navbar-link-width;
+    height: @navbar-link-width;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-position: center;
+    transform: scale(0.8);
+    .icon-background-generator(plus, #fff, @navbar-icon-size, @navbar-icon-size);
+  }
+  &:after {
+    content: '';
+    display: inline-block;
+    box-sizing: border-box;
+    position: absolute;
+    width: @navbar-link-width;
+    height: @navbar-link-width;
+    border-radius: 50%;
+    // border: 1px solid rgba(255, 255, 255, 0.8);
+    top: 0;
+    left: 0;
+    z-index: 0;
+    transform: scale(1.4);
+    background: linear-gradient(135deg, spin(@primary-color, 15), darken(@primary-color, 12%));
+  }
+  position: relative;
+  top: -20px;
+  z-index: 1;
+}
+
+.rt-navbar-link-upload-shadow {
+  position: absolute;
+  left: 50%;
+  right: 0;
+  width: @navbar-link-width;
+  height: @navbar-link-width;
+  margin-left: -1 * @navbar-link-width / 2;
+  border-radius: 50%;
+  transform: scale(1.4);
+  top: -10px;
+  z-index: -1;
+  box-shadow: @navbar-shadow;
+}
