@@ -131,6 +131,7 @@
     .icon-background-generator(square-o, @form-input-icon-color, @form-input-icon-size, @form-input-icon-size);
   }
   &:checked + .rt-form-crlabel::before {
+    background-position-x: 1px;
     .icon-background-generator(check-square-o, @form-input-selected-color, @form-input-icon-size, @form-input-icon-size);
   }
   &[disabled] + .rt-form-crlabel::before {
