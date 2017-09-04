@@ -22,7 +22,6 @@
 @nav-item-fontsize: @small-fontsize;
 @nav-item-color: @default-font-dark-color;
 
-@white-color: #fff;
 @logo-width: 65px;
 @logo-height: @logo-width / 2;
 
@@ -71,7 +70,7 @@
 
 .rt-header-cart {
   @cart-width: 27px;
-  .icon-background-generator(cart, fade(#fff, 70%), @cart-width, @cart-width);
+  .icon-background-generator(cart, #fff, @cart-width, @cart-width);
   position: relative;
   width: @cart-width * 2;
   height: @header-icon-height;
@@ -80,7 +79,7 @@
 
 .rt-header-chat {
   @chat-width: 22px;
-  .icon-background-generator(chat, fade(#fff, 70%), @chat-width, @chat-width);
+  .icon-background-generator(chat, #fff, @chat-width, @chat-width);
   position: relative;
   width: @chat-width * 2;
   height: @header-icon-height;
@@ -109,8 +108,7 @@
   width: 18px;
   border-radius: 50%;
   font-size: 10px;
-  color: @white-color;
-  // border: 3px solid fade(@white-color, 50%);
+  color: #fff;
   background-color: @header-counter-background;
 }
 
@@ -163,7 +161,7 @@
   box-shadow: none;
   background-color: fade(#fff, 30%);
   color: @header-form-input-color;
-  .icon-background-generator(search, fade(#fff, 80%), 18px, 18px);
+  .icon-background-generator(search, #fff, 18px, 18px);
   background-position: 10px 45%;
 
   &::-webkit-input-placeholder {
@@ -200,7 +198,7 @@
 
 .header-full-search-button {
   border-radius: 0 @header-form-borde-radius @header-form-borde-radius 0;
-  .icon-background-generator(search, @white-color, 16, 16);
+  .icon-background-generator(search, #fff, 16, 16);
   background-position: 45% 45%;
 }
 
