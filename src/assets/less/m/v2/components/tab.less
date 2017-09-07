@@ -17,8 +17,6 @@
   padding: 15px 10px 0;
   border-bottom: 1px solid @tab-border-color;
   margin-bottom: @tab-spacing;
-  // background-image: @tab-container-background;
-  // background-color: @grayscale-end-color;
 }
 
 .rt-tab-item {
@@ -28,14 +26,14 @@
   padding: @tab-item-vertical-padding 0 @tab-item-vertical-padding - 2;
   text-align: center;
   border: 1px solid @tab-border-color;
-  border-top-left-radius: @component-border-radius;
-  border-top-right-radius: @component-border-radius;
+  border-top-left-radius: @tab-border-radius;
+  border-top-right-radius: @tab-border-radius;
   font-size: @tab-text-fontsize;
   color: @tab-text-color;
   background-color: @tab-background-color;
 
   + .rt-tab-item {
-    margin-left: 8px;
+    margin-left: @tab-spacing;
   }
 }
 
